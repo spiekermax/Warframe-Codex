@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Alerts</ion-title>
+
+  </ion-navbar>
+
+  <ion-item no-lines class="page-header-platformselect">
+    <ion-label>Platform</ion-label>
+    <ion-select [(ngModel)]="this.alertsPlatform" (ionChange)="appConfigs.setAlertsPlatform(this.alertsPlatform)">
+      <ion-option value="pc">PC</ion-option>
+      <ion-option value="xb1">XB1</ion-option>
+      <ion-option value="ps4">PS4</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-header>
+
+<ion-content class="page-content">
+
+  <ion-refresher (ionRefresh)="this.refreshAlerts($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="crescent"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div [ngSwitch]="this.alertsPlatform">
+    <alert-state *ngSwitchCase="'pc'" #alerts_pc [alertSource]="'https://ws.warframestat.us/pc/alerts'"></alert-state>
+    <alert-state *ngSwitchCase="'xb1'" #alerts_xb1 [alertSource]="'https://ws.warframestat.us/xb1/alerts'"></alert-state>
+    <alert-state *ngSwitchCase="'ps4'" #alerts_ps4 [alertSource]="'https://ws.warframestat.us/ps4/alerts'"></alert-state>
+  </div>
+
+</ion-content>

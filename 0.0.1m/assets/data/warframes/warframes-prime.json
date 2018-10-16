@@ -1,0 +1,184 @@
+[
+    {
+        "id": "0",
+        "name": "Ash Prime",
+        "img": "assets/warframes/prime/AshPrimeFace.png",
+        "shield": "125 (375 at rank 30) (+)",
+        "armor": "150 (+)",
+        "speed": "1.2 (+)",
+        "polarities": "<span class='wficons-naramon'></span><span class='wficons-madurai'></span><span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "2",
+        "name": "Banshee Prime",
+        "img": "assets/warframes/prime/BansheePrimeFace.png",
+        "armor": "65 (+)",
+        "energy": "175 (262 at rank 30) (+)",
+        "speed": "1.15 (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-madurai'></span><span class='wficons-naramon'></span> (+)"
+    },
+    {
+        "id": "3",
+        "name": "Chroma Prime",
+        "img": "assets/warframes/prime/ChromaPrimeFace.png",
+        "armor": "425 (+)",
+        "energy": "200 (300 at rank 30) (+)",
+        "polarities": "<span class='wficons-naramon'></span><span class='wficons-vazarin'></span><span class='wficons-madurai'></span><span class='wficons-naramon'></span> (+)"
+    },
+    {
+        "id": "4",
+        "name": "Ember Prime",
+        "img": "assets/warframes/prime/EmberPrimeFace.png",
+        "shield": "125 (375 at rank 30) (+)",
+        "armor": "125 (+)",
+        "polarities": "<span class='wficons-madurai'><span class='wficons-vazarin'> (+/-)"
+    },
+    {
+        "id": "6",
+        "name": "Excalibur Prime",
+        "img": "assets/warframes/prime/ExcaliburPrimeFace.png",
+        "armor": "300 (+)",
+        "energy": "150 (225 at rank 30) (+)",
+        "polarities": "<span class='wficons-vazarin'></span><span class='wficons-madurai'></span><span class='wficons-madurai'></span> (+)",
+        "aurapol": "<span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "7",
+        "name": "Frost Prime",
+        "img": "assets/warframes/prime/FrostPrimeFace.png",
+        "shield": "175 (525 at rank 30) (+)",
+        "polarities": "<span class='wficons-naramon'></span><span class='wficons-vazarin'></span><span class='wficons-vazarin'></span> (+)"
+    },
+    {
+        "id": "10",
+        "name": "Hydroid Prime",
+        "img": "assets/warframes/prime/HydroidPrimeFace.png",
+        "shield": "175 (525 at rank 30) (+)",
+        "armor": "250 (+)",
+        "energy": "150 (225 at rank 30) (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-vazarin'></span><span class='wficons-naramon'></span><span class='wficons-naramon'></span> (+)"
+    },
+    {
+        "id": "14",
+        "name": "Limbo Prime",
+        "img": "assets/warframes/prime/LimboPrimeFace.png",
+        "shield": "100 (300 at rank 30) (+)",
+        "armor": "85 (+)",
+        "energy": "175 (262 at rank 30) (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-madurai'></span><span class='wficons-naramon'></span><span class='wficons-vazarin'></span> (+)"
+    },
+    {
+        "id": "15",
+        "name": "Loki Prime",
+        "img": "assets/warframes/prime/LokiPrimeFace.png",
+        "energy": "175 (262 at rank 30) (+)",
+        "polarities": "<span class='wficons-vazarin'></span><span class='wficons-vazarin'></span><span class='wficons-madurai'></span><span class='wficons-naramon'></span> (+)"
+    },
+    {
+        "id": "16",
+        "name": "Mag Prime",
+        "img": "assets/warframes/prime/MagPrimeFace.png",
+        "health": "100 (300 at rank 30) (+)",
+        "energy": "175 (262 at rank 30) (+)",
+        "polarities": "<span class='wficons-naramon'></span><span class='wficons-naramon'></span><span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "18",
+        "name": "Mirage Prime",
+        "img": "assets/warframes/prime/MiragePrimeFace.png",
+        "shield": "110 (330 at rank 30) (+)",
+        "armor": "150 (+)",
+        "polarities": "<span class='wficons-vazarin'></span><span class='wficons-vazarin'></span><span class='wficons-naramon'></span><span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "19",
+        "name": "Nekros Prime",
+        "img": "assets/warframes/prime/NekrosPrimeFace.png",
+        "shield": "150 (450 at rank 30) (+)",
+        "energy": "125 (188 at rank 30) (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-vazarin'></span><span class='wficons-naramon'></span> (+)"
+    },
+    {
+        "id": "22",
+        "name": "Nova Prime",
+        "img": "assets/warframes/prime/NovaPrimeFace.png",
+        "shield": "100 (300 at rank 30) (+)",
+        "energy": "175 (262 at rank 30) (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-madurai'></span><span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "23",
+        "name": "Nyx Prime",
+        "img": "assets/warframes/prime/NyxPrimeFace.png",
+        "shield": "125 (375 at rank 30) (+)",
+        "armor": "50 (+)",
+        "speed": "1.12 (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-naramon'></span><span class='wficons-vazarin'></span> (+)"
+    },
+    {
+        "id": "24",
+        "name": "Oberon Prime",
+        "img": "assets/warframes/prime/OberonPrimeFace.png",
+        "armor": "225 (+)",
+        "energy": "175 (262 at rank 30) (+)",
+        "polarities": "<span class='wficons-naramon'></span><span class='wficons-naramon'></span><span class='wficons-madurai'></span><span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "27",
+        "name": "Rhino Prime",
+        "img": "assets/warframes/prime/RhinoPrimeFace.png",
+        "armor": "275 (+)",
+        "speed": "1.0 (+)",
+        "polarities": "<span class='wficons-vazarin'></span><span class='wficons-vazarin'></span><span class='wficons-naramon'></span> (+)"
+    },
+    {
+        "id": "28",
+        "name": "Saryn Prime",
+        "img": "assets/warframes/prime/SarynPrimeFace.png",
+        "armor": "300 (+)",
+        "energy": "200 (300 at rank 30) (+)",
+        "speed": "1.0 (+)",
+        "polarities": "<span class='wficons-naramon'></span><span class='wficons-vazarin'></span><span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "30",
+        "name": "Trinity Prime",
+        "img": "assets/warframes/prime/TrinityPrimeFace.png",
+        "shield": "150 (450 at rank 30) (+)",
+        "speed": "1.1 (+)",
+        "polarities": "<span class='wficons-vazarin'></span><span class='wficons-vazarin'></span><span class='wficons-madurai'></span><span class='wficons-naramon'></span> (+)"
+    },
+    {
+        "id": "31",
+        "name": "Valkyr Prime",
+        "img": "assets/warframes/prime/ValkyrPrimeFace.png",
+        "armor": "700 (+)",
+        "energy": "150 (225 at rank 30) (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-madurai'></span><span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "32",
+        "name": "Vauban Prime",
+        "img": "assets/warframes/prime/VaubanPrimeFace.png",
+        "shield": "100 (300 at rank 30) (+)",
+        "armor": "100 (+)",
+        "polarities": "<span class='wficons-naramon'></span><span class='wficons-madurai'></span><span class='wficons-vazarin'></span> (+)"
+    },
+    {
+        "id": "33",
+        "name": "Volt Prime",
+        "img": "assets/warframes/prime/VoltPrimeFace.png",
+        "armor": "100 (+)",
+        "energy": "200 (300 at rank 30) (+)",
+        "polarities": "<span class='wficons-naramon'></span><span class='wficons-madurai'></span><span class='wficons-madurai'></span> (+)"
+    },
+    {
+        "id": "35",
+        "name": "Zephyr Prime",
+        "img": "assets/warframes/prime/ZephyrPrimeFace.png",
+        "armor": "75 (+)",
+        "energy": "150 (225 at rank 30) (+)",
+        "speed": "1.2 (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-madurai'></span><span class='wficons-vazarin'></span><span class='wficons-naramon'></span> (+)"
+    }
+]

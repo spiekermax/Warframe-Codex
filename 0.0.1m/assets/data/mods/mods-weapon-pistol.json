@@ -1,0 +1,246 @@
+[
+	{
+		"name": "Air Recon",
+		"img": "assets/mods/secondary/Air Recon.png"
+	},
+	{
+		"name": "Anemic Agility",
+		"img": "assets/mods/secondary/Anemic Agility.png"
+	},
+	{
+		"name": "Augur Pact",
+		"img": "assets/mods/secondary/Augur Pact.png"
+	},
+	{
+		"name": "Augur Seeker",
+		"img": "assets/mods/secondary/Augur Seeker.png"
+	},
+	{
+		"name": "Barrel Diffusion",
+		"img": "assets/mods/secondary/Barrel Diffusion.png"
+	},
+	{
+		"name": "Bore",
+		"img": "assets/mods/secondary/Bore.png"
+	},
+	{
+		"name": "Concussion Rounds",
+		"img": "assets/mods/secondary/Concussion Rounds.png"
+	},
+	{
+		"name": "Convulsion",
+		"img": "assets/mods/secondary/Convulsion.png"
+	},
+	{
+		"name": "Creeping Bullseye",
+		"img": "assets/mods/secondary/Creeping Bullseye.png"
+	},
+	{
+		"name": "Deep Freeze",
+		"img": "assets/mods/secondary/Deep Freeze.png"
+	},
+	{
+		"name": "Eject Magazine",
+		"img": "assets/mods/secondary/Eject Magazine.png"
+	},
+	{
+		"name": "Embedded Catalyzer",
+		"img": "assets/mods/secondary/Embedded Catalyzer.png"
+	},
+	{
+		"name": "Expel Corpus",
+		"img": "assets/mods/secondary/Expel Corpus.png"
+	},
+	{
+		"name": "Expel Grineer",
+		"img": "assets/mods/secondary/Expel Grineer.png"
+	},
+	{
+		"name": "Expel Infested",
+		"img": "assets/mods/secondary/Expel Infested.png"
+	},
+	{
+		"name": "Frostbite",
+		"img": "assets/mods/secondary/Frostbite.png"
+	},
+	{
+		"name": "Gunslinger",
+		"img": "assets/mods/secondary/Gunslinger.png"
+	},
+	{
+		"name": "Hawk Eye",
+		"img": "assets/mods/secondary/Hawk Eye.png"
+	},
+	{
+		"name": "Heated Charge",
+		"img": "assets/mods/secondary/Heated Charge.png"
+	},
+	{
+		"name": "Hollow Point",
+		"img": "assets/mods/secondary/Hollow Point.png"
+	},
+	{
+		"name": "Hornet Strike",
+		"img": "assets/mods/secondary/Hornet Strike.png"
+	},
+	{
+		"name": "Hydraulic Crosshairs",
+		"img": "assets/mods/secondary/Hydraulic Crosshairs.png"
+	},
+	{
+		"name": "Ice Storm",
+		"img": "assets/mods/secondary/Ice Storm.png"
+	},
+	{
+		"name": "Jolt",
+		"img": "assets/mods/secondary/Jolt.png"
+	},
+	{
+		"name": "Lethal Momentum",
+		"img": "assets/mods/secondary/Lethal Momentum.png"
+	},
+	{
+		"name": "Lethal Torrent",
+		"img": "assets/mods/secondary/Lethal Torrent.png"
+	},
+	{
+		"name": "Magnum Force",
+		"img": "assets/mods/secondary/Magnum Force.png"
+	},
+	{
+		"name": "Maim",
+		"img": "assets/mods/secondary/Maim.png"
+	},
+	{
+		"name": "No Return",
+		"img": "assets/mods/secondary/No Return.png"
+	},
+	{
+		"name": "Pathogen Rounds",
+		"img": "assets/mods/secondary/Pathogen Rounds.png"
+	},
+	{
+		"name": "Perpetual Agony",
+		"img": "assets/mods/secondary/Perpetual Agony.png"
+	},
+	{
+		"name": "Pistol Ammo Mutation",
+		"img": "assets/mods/secondary/Pistol Ammo Mutation.png"
+	},
+	{
+		"name": "Pistol Gambit",
+		"img": "assets/mods/secondary/Pistol Gambit.png"
+	},
+	{
+		"name": "Pistol Pestilence",
+		"img": "assets/mods/secondary/Pistol Pestilence.png"
+	},
+	{
+		"name": "Pressurised Magazine",
+		"img": "assets/mods/secondary/Pressurised Magazine.png"
+	},
+	{
+		"name": "Primed Expel Corpus",
+		"img": "assets/mods/secondary/Primed Expel Corpus.png"
+	},
+	{
+		"name": "Primed Expel Currupted",
+		"img": "assets/mods/secondary/Primed Expel Corrupted.png"
+	},
+	{
+		"name": "Primed Expel Grineer",
+		"img": "assets/mods/secondary/Primed Expel Grineer.png"
+	},
+	{
+		"name": "Primed Expel Infested",
+		"img": "assets/mods/secondary/Primed Expel Infested.png"
+	},
+	{
+		"name": "Primed Heated Charge",
+		"img": "assets/mods/secondary/Primed Heated Charge.png"
+	},
+	{
+		"name": "Primed Pistol Gambit",
+		"img": "assets/mods/secondary/Primed Pistol Gambit.png"
+	},
+	{
+		"name": "Primed Slip Magazine",
+		"img": "assets/mods/secondary/Primed Slip Magazine.png"
+	},
+	{
+		"name": "Primed Target Cracker",
+		"img": "assets/mods/secondary/Primed Target Cracker.png"
+	},
+	{
+		"name": "Pummel",
+		"img": "assets/mods/secondary/Pummel.png"
+	},
+	{
+		"name": "Quickdraw",
+		"img": "assets/mods/secondary/Quickdraw.png"
+	},
+	{
+		"name": "Razor Shot",
+		"img": "assets/mods/secondary/Razor Shot.png"
+	},
+	{
+		"name": "Reflex Draw.png",
+		"img": "assets/mods/secondary/Reflex Draw.png"
+	},
+	{
+		"name": "Ruinous Extension",
+		"img": "assets/mods/secondary/Ruinous Extension.png"
+	},
+	{
+		"name": "Scorch",
+		"img": "assets/mods/secondary/Seeker.png"
+	},
+	{
+		"name": "Sharpened Bullets",
+		"img": "assets/mods/secondary/Sharpened Bullets.png"
+	},
+	{
+		"name": "Slip Magazine",
+		"img": "assets/mods/secondary/Slip Magazine.png"
+	},
+	{
+		"name": "Spry Sights",
+		"img": "assets/mods/secondary/Spry Sights.png"
+	},
+	{
+		"name": "Steady Hands",
+		"img": "assets/mods/secondary/Steady Hands.png"
+	},
+	{
+		"name": "Strafing Slide",
+		"img": "assets/mods/secondary/Strafing Slide.png"
+	},
+	{
+		"name": "Stunning Speed",
+		"img": "assets/mods/secondary/Stunning Speed.png"
+	},
+	{
+		"name": "Suppress",
+		"img": "assets/mods/secondary/Suppress.png"
+	},
+	{
+		"name": "Sure Shot.png",
+		"img": "assets/mods/secondary/Sure Shot.png"
+	},
+	{
+		"name": "Tainted Clip",
+		"img": "assets/mods/secondary/Tainted Clip.png"
+	},
+	{
+		"name": "Target Cracker",
+		"img": "assets/mods/secondary/Target Cracker.png"
+	},
+	{
+		"name": "Targeting Subsystem",
+		"img": "assets/mods/secondary/Targeting Subsystem.png"
+	},
+	{
+		"name": "Trick Mag",
+		"img": "assets/mods/secondary/Trick Mag.png"
+	}
+]

@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Animal Instinct",
+        "img": "assets/mods/companion/Animal Instinct.png"
+    },
+    {
+        "name": "Bite",
+        "img": "assets/mods/companion/pets/Bite.png"
+    },
+    {
+        "name": "Hunter Command",
+        "img": "assets/mods/companion/pets/Hunter Command.png"
+    },
+    {
+        "name": "Hunter Recovery",
+        "img": "assets/mods/companion/pets/Hunter Recovery.png"
+    },
+    {
+        "name": "Hunter Synergy",
+        "img": "assets/mods/companion/pets/Hunter Synergy.png"
+    },
+    {
+        "name": "Link Armor",
+        "img": "assets/mods/companion/pets/Link Armor.png"
+    },
+    {
+        "name": "Link Health",
+        "img": "assets/mods/companion/pets/Link Health.png"
+    },
+    {
+        "name": "Link Shields",
+        "img": "assets/mods/companion/pets/Link Shields.png"
+    },
+    {
+        "name": "Loyal Companion",
+        "img": "assets/mods/companion/pets/Loyal Companion.png"
+    },
+    {
+        "name": "Maul",
+        "img": "assets/mods/companion/pets/Maul.png"
+    },
+    {
+        "name": "Medi-Pet Kit",
+        "img": "assets/mods/companion/pets/Medi-Pet Kit.png"
+    },
+    {
+        "name": "Pack Leader",
+        "img": "assets/mods/companion/pets/Pack Leader.png"
+    },
+    {
+        "name": "Scavenge",
+        "img": "assets/mods/companion/pets/Scavenge.png"
+    },
+    {
+        "name": "Shelter",
+        "img": "assets/mods/companion/pets/Shelter.png"
+    },
+    {
+        "name": "Pounce",
+        "img": "assets/mods/companion/pets/kavat/Pounce.png"
+    },
+    {
+        "name": "Sense Danger",
+        "img": "assets/mods/companion/pets/kavat/Sense Danger.png"
+    },
+    {
+        "name": "Sharpened Claws",
+        "img": "assets/mods/companion/pets/kavat/Sharpened Claws.png"
+    },
+    {
+        "name": "Swipe",
+        "img": "assets/mods/companion/pets/kavat/Swipe.png"
+    },
+    {
+        "name": "Territorial Aggression",
+        "img": "assets/mods/companion/pets/kavat/Territorial Aggression.png"
+    },
+    {
+        "name": "Cat's Eye",
+        "img": "assets/mods/companion/pets/kavat/adarza/Cat's Eye.png"
+    },
+    {
+        "name": "Reflect",
+        "img": "assets/mods/companion/pets/kavat/adarza/Reflect.png"
+    },
+    {
+        "name": "Charm",
+        "img": "assets/mods/companion/pets/kavat/smeeta/Charm.png"
+    },
+    {
+        "name": "Mischief",
+        "img": "assets/mods/companion/pets/kavat/smeeta/Mischief.png"
+    },
+    {
+        "name": "Neutralize",
+        "img": "assets/mods/companion/pets/kubrow/chesa/Neutralize.png"
+    },
+    {
+        "name": "Retrieve",
+        "img": "assets/mods/companion/pets/kubrow/chesa/Retrieve.png"
+    },
+    {
+        "name": "Hunt",
+        "img": "assets/mods/companion/pets/kubrow/huras/Hunt.png"
+    },
+    {
+        "name": "Stalk",
+        "img": "assets/mods/companion/pets/kubrow/huras/Stalk.png"
+    },
+    {
+        "name": "Howl",
+        "img": "assets/mods/companion/pets/kubrow/raksa/Howl.png"
+    },
+    {
+        "name": "Protect",
+        "img": "assets/mods/companion/pets/kubrow/raksa/Protect.png"
+    },
+    {
+        "name": "Dig",
+        "img": "assets/mods/companion/pets/kubrow/sahasa/Dig.png"
+    },
+    {
+        "name": "Ferocity",
+        "img": "assets/mods/companion/pets/kubrow/sahasa/Ferocity.png"
+    },
+    {
+        "name": "Savagery",
+        "img": "assets/mods/companion/pets/kubrow/sunika/Savagery.png"
+    },
+    {
+        "name": "Unleashed",
+        "img": "assets/mods/companion/pets/kubrow/sunika/Unleashed.png"
+    }
+]

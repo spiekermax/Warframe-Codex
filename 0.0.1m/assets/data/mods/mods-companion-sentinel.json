@@ -1,0 +1,150 @@
+[
+    {
+        "name": "Accelerated Deflection",
+        "img": "assets/mods/companion/sentinel/Accelerated Deflection.png"
+    },
+    {
+        "name": "Animal Instinct",
+        "img": "assets/mods/companion/Animal Instinct.png"
+    },
+    {
+        "name": "Calculated Redirection",
+        "img": "assets/mods/companion/sentinel/Calculated Redirection.png"
+    },
+    {
+        "name": "Coolant Leak",
+        "img": "assets/mods/companion/sentinel/Coolant Leak.png"
+    },
+    {
+        "name": "Enhanced Vitality",
+        "img": "assets/mods/companion/sentinel/Enhanced Vitality.png"
+    },
+    {
+        "name": "Fired Up",
+        "img": "assets/mods/companion/sentinel/Fired Up.png"
+    },
+    {
+        "name": "Guardian",
+        "img": "assets/mods/companion/sentinel/Guardian.png"
+    },
+    {
+        "name": "Medi-Ray",
+        "img": "assets/mods/companion/sentinel/Medi-Ray.png"
+    },
+    {
+        "name": "Metal Fiber",
+        "img": "assets/mods/companion/sentinel/Metal Fiber.png"
+    },
+    {
+        "name": "Primed Regen",
+        "img": "assets/mods/companion/sentinel/Primed Regen.png"
+    },
+    {
+        "name": "Regen",
+        "img": "assets/mods/companion/sentinel/Regen.png"
+    },
+    {
+        "name": "Sacrifice",
+        "img": "assets/mods/companion/sentinel/Sacrifice.png"
+    },
+    {
+        "name": "Sanctuary",
+        "img": "assets/mods/companion/sentinel/Sanctuary.png"
+    },
+    {
+        "name": "Self Destruct",
+        "img": "assets/mods/companion/sentinel/Self Destruct.png"
+    },
+    {
+        "name": "Shield Charger",
+        "img": "assets/mods/companion/sentinel/Shield Charger.png"
+    },
+    {
+        "name": "Spare Parts",
+        "img": "assets/mods/companion/sentinel/Spare Parts.png"
+    },
+    {
+        "name": "Vacuum",
+        "img": "assets/mods/companion/sentinel/Vacuum.png"
+    },
+    {
+        "name": "Ammo Case",
+        "img": "assets/mods/companion/sentinel/carrier/Ammo Case.png"
+    },
+    {
+        "name": "Looter",
+        "img": "assets/mods/companion/sentinel/carrier/Looter.png"
+    },
+    {
+        "name": "Striker",
+        "img": "assets/mods/companion/sentinel/carrier/Striker.png"
+    },
+    {
+        "name": "Swift Deth",
+        "img": "assets/mods/companion/sentinel/dethcube/Swift Deth.png"
+    },
+    {
+        "name": "Vaporize",
+        "img": "assets/mods/companion/sentinel/dethcube/Vaporize.png"
+    },
+    {
+        "name": "Arc Coil",
+        "img": "assets/mods/companion/sentinel/diriga/Arc Coil.png"
+    },
+    {
+        "name": "Calculated Shot",
+        "img": "assets/mods/companion/sentinel/diriga/Calculated Shot.png"
+    },
+    {
+        "name": "Electro Pulse",
+        "img": "assets/mods/companion/sentinel/diriga/Electro Pulse.png"
+    },
+    {
+        "name": "Fatal Attraction",
+        "img": "assets/mods/companion/sentinel/djinn/Fatal Attraction.png"
+    },
+    {
+        "name": "Reawaken",
+        "img": "assets/mods/companion/sentinel/djinn/Reawaken.png"
+    },
+    {
+        "name": "Thumper",
+        "img": "assets/mods/companion/sentinel/djinn/Thumper.png"
+    },
+    {
+        "name": "Detect Vulnerability",
+        "img": "assets/mods/companion/sentinel/helios/Detect Vulnerability.png"
+    },
+    {
+        "name": "Investigator",
+        "img": "assets/mods/companion/sentinel/helios/Investigator.png"
+    },
+    {
+        "name": "Targeting Receptor",
+        "img": "assets/mods/companion/sentinel/helios/Targeting Receptor.png"
+    },
+    {
+        "name": "Ghost",
+        "img": "assets/mods/companion/sentinel/shade/Ghost.png"
+    },
+    {
+        "name": "Revenge",
+        "img": "assets/mods/companion/sentinel/shade/Revenge.png"
+    },
+    {
+        "name": "Molecular Conversion",
+        "img": "assets/mods/companion/sentinel/taxon/Molecular Conversion.png"
+    },
+    {
+        "name": "Retarget",
+        "img": "assets/mods/companion/sentinel/taxon/Retarget.png"
+    },
+    {
+        "name": "Crowd Dispersion",
+        "img": "assets/mods/companion/sentinel/wyrm/Crowd Dispersion.png"
+    },
+    {
+        "name": "Warrior",
+        "img": "assets/mods/companion/sentinel/wyrm/Warrior.png"
+    }
+]

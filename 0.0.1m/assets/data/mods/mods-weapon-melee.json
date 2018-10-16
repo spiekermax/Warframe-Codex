@@ -1,0 +1,250 @@
+[
+    {
+        "name": "Auger Strike",
+        "img": "assets/mods/melee/Auger Strike.png"
+    },
+    {
+        "name": "Berserker",
+        "img": "assets/mods/melee/Berserker.png"
+    },
+    {
+        "name": "Blood Rush",
+        "img": "assets/mods/melee/Blood Rush.png"
+    },
+    {
+        "name": "Body Count",
+        "img": "assets/mods/melee/Body Count.png"
+    },
+    {
+        "name": "Buzz Kill",
+        "img": "assets/mods/melee/Buzz Kill.png"
+    },
+    {
+        "name": "Collision Force",
+        "img": "assets/mods/melee/Collision Force.png"
+    },
+    {
+        "name": "Condition Overload",
+        "img": "assets/mods/melee/Condition Overload.png"
+    },
+    {
+        "name": "Corrupt Charge",
+        "img": "assets/mods/melee/Corrupt Charge.png"
+    },
+    {
+        "name": "Dispatch Overdrive",
+        "img": "assets/mods/melee/Dispatch Overdrive.png"
+    },
+    {
+        "name": "Drifting Contact",
+        "img": "assets/mods/melee/Drifting Contact.png"
+    },
+    {
+        "name": "Enduring Affliction",
+        "img": "assets/mods/melee/Enduring Affliction.png"
+    },
+    {
+        "name": "Enduring Strike",
+        "img": "assets/mods/melee/Enduring Strike.png"
+    },
+    {
+        "name": "Energy Channel",
+        "img": "assets/mods/melee/Energy Channel.png"
+    },
+    {
+        "name": "Fever Strike",
+        "img": "assets/mods/melee/Fever Strike.png"
+    },
+    {
+        "name": "Finishing Touch",
+        "img": "assets/mods/melee/Finishing Touch.png"
+    },
+    {
+        "name": "Focus Energy",
+        "img": "assets/mods/melee/Focus Energy.png"
+    },
+    {
+        "name": "Focused Defense",
+        "img": "assets/mods/melee/Focused Defense.png"
+    },
+    {
+        "name": "Fury",
+        "img": "assets/mods/melee/Fury.png"
+    },
+    {
+        "name": "Gladiator Might",
+        "img": "assets/mods/melee/Gladiator Might.png"
+    },
+    {
+        "name": "Gladiator Rush",
+        "img": "assets/mods/melee/Gladiator Rush.png"
+    },
+    {
+        "name": "Gladiator Vice",
+        "img": "assets/mods/melee/Gladiator Vice.png"
+    },
+    {
+        "name": "Guardian Derision",
+        "img": "assets/mods/melee/Guardian Derision.png"
+    },
+    {
+        "name": "Healing Return",
+        "img": "assets/mods/melee/Healing Return.png"
+    },
+    {
+        "name": "Heavy Trauma",
+        "img": "assets/mods/melee/Heavy Trauma.png"
+    },
+    {
+        "name": "Jagged Edge",
+        "img": "assets/mods/melee/Jagged Edge.png"
+    },
+    {
+        "name": "Killing Blow",
+        "img": "assets/mods/melee/Killing Blow.png"
+    },
+    {
+        "name": "Lasting Sting",
+        "img": "assets/mods/melee/Lasting Sting.png"
+    },
+    {
+        "name": "Life Strike",
+        "img": "assets/mods/melee/Life Strike.png"
+    },
+    {
+        "name": "Maiming Strike.png",
+        "img": "assets/mods/melee/Maiming Strike.png"
+    },
+    {
+        "name": "Melee Prowess",
+        "img": "assets/mods/melee/Melee Prowess.png"
+    },
+    {
+        "name": "Molten Impact",
+        "img": "assets/mods/melee/Molten Impact.png"
+    },
+    {
+        "name": "North Wind",
+        "img": "assets/mods/melee/North Wind.png"
+    },
+    {
+        "name": "Organ Shatter",
+        "img": "assets/mods/melee/Organ Shatter.png"
+    },
+    {
+        "name": "Parry",
+        "img": "assets/mods/melee/Parry.png"
+    },
+    {
+        "name": "Power Throw",
+        "img": "assets/mods/melee/Power Throw.png"
+    },
+    {
+        "name": "Presure Point",
+        "img": "assets/mods/melee/Pressure Point.png"
+    },
+    {
+        "name": "Primed Fever Strike",
+        "img": "assets/mods/melee/Primed Fever Strike.png"
+    },
+    {
+        "name": "Primed Heavy Trauma",
+        "img": "assets/mods/melee/Primed Heavy Trauma.png"
+    },
+    {
+        "name": "Primed Pressure Point",
+        "img": "assets/mods/melee/Primed Pressure Point.png"
+    },
+    {
+        "name": "Primed Reach",
+        "img": "assets/mods/melee/Primed Reach.png"
+    },
+    {
+        "name": "Quick Return",
+        "img": "assets/mods/melee/Quick Return.png"
+    },
+    {
+        "name": "Quickening",
+        "img": "assets/mods/melee/Quickening.png"
+    },
+    {
+        "name": "Reach",
+        "img": "assets/mods/melee/Reach.png"
+    },
+    {
+        "name": "Rebound",
+        "img": "assets/mods/melee/Rebound.png"
+    },
+    {
+        "name": "Reflex Coil",
+        "img": "assets/mods/melee/Reflex Coil.png"
+    },
+    {
+        "name": "Relentless Combination",
+        "img": "assets/mods/melee/Relentless Combination.png"
+    },
+    {
+        "name": "Rending Strike",
+        "img": "assets/mods/melee/Rending Strike.png"
+    },
+    {
+        "name": "Seismic Wave",
+        "img": "assets/mods/melee/Seismic Wave.png"
+    },
+    {
+        "name": "Shocking Touch",
+        "img": "assets/mods/melee/Shocking Touch.png"
+    },
+    {
+        "name": "Smite Corpus",
+        "img": "assets/mods/melee/Smite Corpus.png"
+    },
+    {
+        "name": "Smite Grineer",
+        "img": "assets/mods/melee/Smite Grineer.png"
+    },
+    {
+        "name": "Smite Infested",
+        "img": "assets/mods/melee/Smite Infested.png"
+    },
+    {
+        "name": "Spoiled Strike",
+        "img": "assets/mods/melee/Spoiled Strike.png"
+    },
+    {
+        "name": "Sundering Strike",
+        "img": "assets/mods/melee/Sundering Strike.png"
+    },
+    {
+        "name": "True Punishment",
+        "img": "assets/mods/melee/True Punishment.png"
+    },
+    {
+        "name": "True Steel",
+        "img": "assets/mods/melee/True Steel.png"
+    },
+    {
+        "name": "Vicious Frost",
+        "img": "assets/mods/melee/Vicious Frost.png"
+    },
+    {
+        "name": "Virulent Scourge",
+        "img": "assets/mods/melee/Virulent Scourge.png"
+    },
+    {
+        "name": "Volcanic Edge",
+        "img": "assets/mods/melee/Volcanic Edge.png"
+    },
+    {
+        "name": "Voltaic Strike",
+        "img": "assets/mods/melee/Voltaic Strike.png"
+    },
+    {
+        "name": "Weeping Wounds",
+        "img": "assets/mods/melee/Weeping Wounds.png"
+    },
+    {
+        "name": "Whirlwind",
+        "img": "assets/mods/melee/Whirlwind.png"
+    }
+]

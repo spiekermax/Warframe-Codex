@@ -1,0 +1,218 @@
+[
+	{
+		"name": "Accelerated Blast",
+		"img": "assets/mods/primary/shotgun/Accelerated Blast.png"
+	},
+	{
+		"name": "Ammo Stock",
+		"img": "assets/mods/primary/shotgun/Ammo Stock.png"
+	},
+	{
+		"name": "Blaze",
+		"img": "assets/mods/primary/shotgun/Blaze.png"
+	},
+	{
+		"name": "Blunderbuss",
+		"img": "assets/mods/primary/shotgun/Blunderbuss.png"
+	},
+	{
+		"name": "Breach Loader",
+		"img": "assets/mods/primary/shotgun/Breach Loader.png"
+	},
+	{
+		"name": "Broad Eye",
+		"img": "assets/mods/primary/shotgun/Broad Eye.png"
+	},
+	{
+		"name": "Burdened Magazine",
+		"img": "assets/mods/primary/shotgun/Burdened Magazine.png"
+	},
+	{
+		"name": "Charged Shell",
+		"img": "assets/mods/primary/shotgun/Charged Shell.png"
+	},
+	{
+		"name": "Chilling Grasp",
+		"img": "assets/mods/primary/shotgun/Chilling Grasp.png"
+	},
+	{
+		"name": "Chilling Reload",
+		"img": "assets/mods/primary/shotgun/Chilling Reload.png"
+	},
+	{
+		"name": "Cleanse Corpus",
+		"img": "assets/mods/primary/shotgun/Cleanse Corpus.png"
+	},
+	{
+		"name": "Cleanse Grineer",
+		"img": "assets/mods/primary/shotgun/Cleanse Grineer.png"
+	},
+	{
+		"name": "Cleanse Infested",
+		"img": "assets/mods/primary/shotgun/Cleanse Infested.png"
+	},
+	{
+		"name": "Contagious Spread",
+		"img": "assets/mods/primary/shotgun/Contagious Spread.png"
+	},
+	{
+		"name": "Critical Deceleration",
+		"img": "assets/mods/primary/shotgun/Critical Deceleration.png"
+	},
+	{
+		"name": "Disruptor",
+		"img": "assets/mods/primary/shotgun/Disruptor.png"
+	},
+	{
+		"name": "Double-Barrel Drift",
+		"img": "assets/mods/primary/shotgun/Double-Barrel Drift.png"
+	},
+	{
+		"name": "Fatal Acceleration",
+		"img": "assets/mods/primary/shotgun/Fatal Acceleration.png"
+	},
+	{
+		"name": "Flechette",
+		"img": "assets/mods/primary/shotgun/Flechette.png"
+	},
+	{
+		"name": "Frail Momentum",
+		"img": "assets/mods/primary/shotgun/Frail Momentum.png"
+	},
+	{
+		"name": "Frigid Blast",
+		"img": "assets/mods/primary/shotgun/Frigid Blast.png"
+	},
+	{
+		"name": "Full Contact",
+		"img": "assets/mods/primary/shotgun/Full Contact.png"
+	},
+	{
+		"name": "Hells Chamber",
+		"img": "assets/mods/primary/shotgun/Hells Chamber.png"
+	},
+	{
+		"name": "Incendiary Coat",
+		"img": "assets/mods/primary/shotgun/Incendiary Coat.png"
+	},
+	{
+		"name": "Laser Sight",
+		"img": "assets/mods/primary/shotgun/Laser Sight.png"
+	},
+	{
+		"name": "Lingering Torment",
+		"img": "assets/mods/primary/shotgun/Lingering Torment.png"
+	},
+	{
+		"name": "Lock and Load",
+		"img": "assets/mods/primary/shotgun/Lock and Load.png"
+	},
+	{
+		"name": "Nano-Applicator",
+		"img": "assets/mods/primary/shotgun/Nano-Applicator.png"
+	},
+	{
+		"name": "Narrow Barrel",
+		"img": "assets/mods/primary/shotgun/Narrow Barrel.png"
+	},
+	{
+		"name": "Point Blank",
+		"img": "assets/mods/primary/shotgun/Point Blank.png"
+	},
+	{
+		"name": "Primed Charged Shell",
+		"img": "assets/mods/primary/shotgun/Primed Charged Shell.png"
+	},
+	{
+		"name": "Primed Point Blank",
+		"img": "assets/mods/primary/shotgun/Primed Point Blank.png"
+	},
+	{
+		"name": "Primed Ravage",
+		"img": "assets/mods/primary/shotgun/Primed Ravage.png"
+	},
+	{
+		"name": "Primed Shotgun Ammo Mutation",
+		"img": "assets/mods/primary/shotgun/Primed Shotgun Ammo Mutation.png"
+	},
+	{
+		"name": "Ravage",
+		"img": "assets/mods/primary/shotgun/Ravage.png"
+	},
+	{
+		"name": "Repeater Clip",
+		"img": "assets/mods/primary/shotgun/Repeater Clip.png"
+	},
+	{
+		"name": "Scattering Inferno",
+		"img": "assets/mods/primary/shotgun/Scattering Inferno.png"
+	},
+	{
+		"name": "Seeking Force",
+		"img": "assets/mods/primary/shotgun/Seeking Force.png"
+	},
+	{
+		"name": "Seeking Fury",
+		"img": "assets/mods/primary/shotgun/Seeking Fury.png"
+	},
+	{
+		"name": "Shell Compression",
+		"img": "assets/mods/primary/shotgun/Shell Compression.png"
+	},
+	{
+		"name": "Shell Shock",
+		"img": "assets/mods/primary/shotgun/Shell Shock.png"
+	},
+	{
+		"name": "Shotgun Ammo Mutation",
+		"img": "assets/mods/primary/shotgun/Shotgun Ammo Mutation.png"
+	},
+	{
+		"name": "Shotgun Savvy",
+		"img": "assets/mods/primary/shotgun/Shotgun Savvy.png"
+	},
+	{
+		"name": "Shotgun Spazz",
+		"img": "assets/mods/primary/shotgun/Shotgun Spazz.png"
+	},
+	{
+		"name": "Shrapnel Shot",
+		"img": "assets/mods/primary/shotgun/Shrapnel Shot.png"
+	},
+	{
+		"name": "Shredder",
+		"img": "assets/mods/primary/shotgun/Shredder.png"
+	},
+	{
+		"name": "Silent Battery",
+		"img": "assets/mods/primary/shotgun/Silent Battery.png"
+	},
+	{
+		"name": "Snap Shot",
+		"img": "assets/mods/primary/shotgun/Snap Shot.png"
+	},
+	{
+		"name": "Soft Hands",
+		"img": "assets/mods/primary/shotgun/Soft Hands.png"
+	},
+	{
+		"name": "Sweeping Serration",
+		"img": "assets/mods/primary/shotgun/Sweeping Serration.png"
+	},
+	{
+		"name": "Tactical Pump",
+		"img": "assets/mods/primary/shotgun/Tactical Pump.png"
+	},
+	{
+		"name": "Tainted Shell",
+		"img": "assets/mods/primary/shotgun/Tainted Shell.png"
+	},
+	{
+		"name": "Toxic Barrage",
+		"img": "assets/mods/primary/shotgun/Toxic Barrage.png"
+	},
+	{
+		"name": "Vicious Spread",
+		"img": "assets/mods/primary/shotgun/Vicious Spread.png"
+	}
+]

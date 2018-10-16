@@ -1,0 +1,72 @@
+[
+	{
+		"name": "Lanka",
+		"img": "assets/weapons/primary/snipers/Lanka.png",
+		"noiselvl": "Alarming",
+		"firerate": "1.0 rounds per sec",
+		"accuracy": "100",
+		"magsize": "10 rounds per mag",
+		"ammo": "72 rounds",
+		"reload": "2.0s",
+		"damage": "200 - 525 Electricity",
+		"crit": "25%",
+		"critdmg": "2.0x",
+		"status": "25%"
+	},
+	{
+		"name": "Rubico",
+		"img": "assets/weapons/primary/snipers/Rubico.png",
+		"noiselvl": "Alarming",
+		"firerate": "2.67 rounds per sec",
+		"accuracy": "13.3",
+		"magsize": "5 rounds per mag",
+		"ammo": "72 rounds",
+		"reload": "2.4s",
+		"damage": "180.0 (80% Impact)",
+		"crit": "30%",
+		"critdmg": "3.0x",
+		"status": "12%"
+	},
+	{
+		"name": "Snipetron",
+		"img": "assets/weapons/primary/snipers/Snipetron.png",
+		"noiselvl": "Alarming",
+		"firerate": "2.0 rounds per sec",
+		"accuracy": "13.3",
+		"magsize": "4 rounds per mag",
+		"ammo": "72 rounds",
+		"reload": "3.5s",
+		"damage": "180.0 (80% Puncture)",
+		"crit": "25%",
+		"critdmg": "2.0x",
+		"status": "25%"
+	},
+	{
+		"name": "Vectis",
+		"img": "assets/weapons/primary/snipers/Vectis.png",
+		"noiselvl": "Alarming",
+		"firerate": "1.5 rounds per sec",
+		"accuracy": "13.3",
+		"magsize": "1 round per mag",
+		"ammo": "72 rounds",
+		"reload": "1.0s",
+		"damage": "225.0 (40% Impact)",
+		"crit": "25%",
+		"critdmg": "2.0x",
+		"status": "30%"
+	},
+	{
+		"name": "Vulkar",
+		"img": "assets/weapons/primary/snipers/Vulkar.png",
+		"noiselvl": "Alarming",
+		"firerate": "1.5 rounds per sec",
+		"accuracy": "13.3",
+		"magsize": "6 rounds per mag",
+		"ammo": "72 rounds",
+		"reload": "3.0s",
+		"damage": "225.0 (80% Impact)",
+		"crit": "20%",
+		"critdmg": "2.0x",
+		"status": "25%"
+	}
+]

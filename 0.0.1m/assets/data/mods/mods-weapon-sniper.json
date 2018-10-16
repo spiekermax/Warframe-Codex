@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Charged Chamber",
+		"img": "assets/mods/primary/sniper/Charged Chamber.png"
+	},
+	{
+		"name": "Depleted Reload",
+		"img": "assets/mods/primary/sniper/Depleted Reload.png"
+	},
+	{
+		"name": "Harkonar Scope",
+		"img": "assets/mods/primary/sniper/Harkonar Scope.png"
+	},
+	{
+		"name": "Primed Chamber",
+		"img": "assets/mods/primary/sniper/Primed Chamber.png"
+	},
+	{
+		"name": "Sniper Ammo Mutation",
+		"img": "assets/mods/primary/sniper/Sniper Ammo Mutation.png"
+	}
+]

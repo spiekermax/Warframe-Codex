@@ -1,0 +1,31 @@
+<ion-menu class="sidemenu" [content]="content" (ionClose)="this.onSidemenuClosed()">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Warframe Codex</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="sidemenu-content">
+    <button menuClose class="sidemenu-button" (click)="this.openPage(this.pageAlerts)">Alerts</button>
+    <button menuClose class="sidemenu-button" (click)="this.openWikiPage('Companions', 'Companions')">Companions</button>
+    <button menuClose class="sidemenu-button" (click)="this.openWikiPage('Warframes', 'Warframes')">Warframes</button>
+    <button class="sidemenu-button" (click)="this.toggleSubmenu('sidemenu-submenu_weapons')">Weapons</button>
+      <div id="sidemenu-submenu_weapons" class="sidemenu-submenu" extended="false" content-height="150px">
+        <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Primary Weapons', 'Weapons')">Primary</button>
+        <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Secondary Weapons', 'Weapons')">Secondary</button>
+        <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Melee Weapons', 'Weapons')">Melee</button>
+      </div>
+    <button class="sidemenu-button" (click)="this.toggleSubmenu('sidemenu-submenu_mods')">Mods</button>
+      <div id="sidemenu-submenu_mods" class="sidemenu-submenu" extended="false" content-height="200px">
+        <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Archwing Mods', 'Mods')">Archwing</button>
+        <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Companion Mods', 'Mods')">Companion</button>
+        <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Warframe Mods', 'Mods')">Warframe</button>
+        <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Weapon Mods', 'Mods')">Weapon</button>
+      </div>
+    <button class="sidemenu-button" (click)="this.showAlert('Info', 'Free platinum giveaways coming soon!')">Giveaways</button>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav #content [root]="this.pageWiki" swipeBackEnabled="false"></ion-nav>

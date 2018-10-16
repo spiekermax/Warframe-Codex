@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{this.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <div class="content-header">
+    <img src={{this.img}}>
+  </div>
+
+  <div class="content-section">
+    <h4>Stats</h4>
+    <p><b>Health:</b> {{this.health}}</p>
+    <p><b>Shield:</b> {{this.shield}}</p>
+    <p><b>Armor:</b> {{this.armor}}</p>
+    <p><b>Power:</b> {{this.power}}</p>
+    <p><b>Polarities:</b><span [innerHTML]="this.polarities"></span></p>
+  </div>
+
+  <hr class="content-seperator">
+
+  <div class="content-section">
+    <h4>{{this.wpname}} (Weapon)</h4>
+    <p><b>Noise Level:</b> {{this.noiselvl}}</p>
+    <p><b>Firerate:</b> {{this.firerate}}</p>
+    <p><b>Accuracy:</b> {{this.accuracy}}</p>
+    <p><b>Magazine Size:</b> {{this.magsize}}</p>
+    <p><b>Reload Time:</b> {{this.reload}}</p>
+    <p><b>Total Damage:</b> {{this.damage}}</p>
+    <p><b>Crit Chance:</b> {{this.crit}}</p>
+    <p><b>Crit Multiplier:</b> {{this.critdmg}}</p>
+    <p><b>Status Chance:</b> {{this.status}}</p>
+  </div>
+
+</ion-content>

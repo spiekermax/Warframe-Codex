@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{this.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <div class="content-header">
+    <img src={{this.img}}>
+  </div>
+
+  <div class="content-section">
+    <h4>Normal Attacks</h4>
+    <p><b>Attack Speed:</b> {{this.atkspeed}}</p>
+    <p><b>Block Resist.:</b> {{this.blockred}}</p>
+    <p><b>Total Damage:</b> {{this.damage}}</p>
+    <p><b>Crit Chance:</b> {{this.crit}}</p>
+    <p><b>Crit Multiplier:</b> {{this.critdmg}}</p>
+    <p><b>Status Chance:</b> {{this.status}}</p>
+  </div>
+
+  <hr class="content-seperator">
+
+  <div class="content-section">
+    <h4>Other Attacks</h4>
+    <p><b>Slam Attack:</b> {{this.slam}}</p>
+    <p><b>Slide Attack:</b> {{this.slide}}</p>
+    <p><b>Wall Attack:</b> {{this.wall}}</p>
+  </div>
+ 
+</ion-content>

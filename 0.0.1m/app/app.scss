@@ -1,0 +1,88 @@
+/* GLOBAL SASS */
+
+ion-buttons {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+@font-face {
+    font-family: 'wficons';
+    src:  url(../assets/misc/icons.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="wficons-"], [class*=" wficons-"] {
+    font-family: 'wficons' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.wficons-penjaga:before {
+  content: "\e900";
+}
+.wficons-vazarin:before {
+  content: "\e901";
+}
+.wficons-naramon:before {
+  content: "\e902";
+}
+.wficons-madurai:before {
+  content: "\e903";
+}
+.wficons-filter:before {
+  content: "\e904";
+}
+.wficons-umbra:before {
+    content: "\e905";
+}
+
+/* APP.COMPONENT SASS */
+
+.alert-disclaimer .alert-message {
+    height: 180px;
+}
+
+.alert-patchnotes .alert-message {
+    height: 260px;
+}
+
+.sidemenu {
+
+    .sidemenu-content {
+
+        background-color: map-get($colors , primary);
+
+        .sidemenu-button {
+            width: 100%;
+            height: 50px;
+            text-align: left;
+            padding-left: 25px;
+            color: #6A6A6A;
+            background-color: map-get($colors , primary);
+        }
+        .sidemenu-button:focus {
+            background-color: map-get($colors , light);
+        }
+
+        .sidemenu-submenu {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+
+            .sidemenu-submenu-button {
+                @extend .sidemenu-button;
+                padding-left: 35px;
+            }
+            .sidemenu-submenu-button:focus {
+                @extend .sidemenu-button:focus;
+            }
+        }
+
+    }
+
+};

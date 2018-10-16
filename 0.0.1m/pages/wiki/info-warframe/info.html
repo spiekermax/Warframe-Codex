@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{this.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <div class="content-header">
+    <div class="header-portrait"><img src={{this.img}}></div>
+    <div class="header-quote">
+      <p><i>{{this.quote}}</i></p>
+    </div>
+  </div>
+
+  <hr class="content-seperator">
+
+  <div class="content-section">
+    <h4>Stats</h4>
+    <p><b>Health: </b>{{this.health}}</p>
+    <p><b>Shield: </b>{{this.shield}}</p>
+    <p><b>Armor: </b>{{this.armor}}</p>
+    <p><b>Energy: </b>{{this.energy}}</p>
+    <p><b>Speed: </b>{{this.speed}}</p>
+    <p><b>Polarities: </b><span [innerHTML]="this.polarities"></span></p>
+    <p><b>Aura Poloraity: </b><span [innerHTML]="this.aurapol"></span></p>
+  </div>
+
+  <hr class="content-seperator">
+
+  <div class="content-section">
+    <h4>Abilities</h4>
+    <p><b>{{this.abl1}}</b> - {{this.abl1Info}}</p>
+    <p><b>{{this.abl2}}</b> - {{this.abl2Info}}</p>
+    <p><b>{{this.abl3}}</b> - {{this.abl3Info}}</p>
+    <p><b>{{this.abl4}}</b> - {{this.abl4Info}}</p>
+  </div>
+</ion-content>

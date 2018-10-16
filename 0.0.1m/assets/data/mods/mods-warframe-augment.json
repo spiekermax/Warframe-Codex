@@ -1,0 +1,446 @@
+[
+    {
+        "name": "Ash, Seeking Shuriken",
+        "img": "assets/mods/augment/ash/Seeking Shuriken.png"
+    },
+    {
+        "name": "Ash, Smoke Shadow",
+        "img": "assets/mods/augment/ash/Smoke Shadow.png"
+    },
+    {
+        "name": "Ash, Fatal Teleport",
+        "img": "assets/mods/augment/ash/Fatal Teleport.png"
+    },
+    {
+        "name": "Ash, Rising Storm",
+        "img": "assets/mods/augment/ash/Rising Storm.png"
+    },
+    {
+        "name": "Atlas, Path of Statues",
+        "img": "assets/mods/augment/atlas/Path of Statues.png"
+    },
+    {
+        "name": "Atlas, Tectonic Fracture",
+        "img": "assets/mods/augment/atlas/Tectonic Fracture.png"
+    },
+    {
+        "name": "Atlas, Ore Graze",
+        "img": "assets/mods/augment/atlas/Ore Graze.png"
+    },
+    {
+        "name": "Atlas, Titanic Rumbler",
+        "img": "assets/mods/augment/atlas/Titanic Rumbler.png"
+    },
+    {
+        "name": "Banshee, Sonic Fracture",
+        "img": "assets/mods/augment/banshee/Sonic Fracture.png"
+    },
+    {
+        "name": "Banshee, Resonance",
+        "img": "assets/mods/augment/banshee/Resonance.png"
+    },
+    {
+        "name": "Banshee, Savage Silence",
+        "img": "assets/mods/augment/banshee/Savage Silence.png"
+    },
+    {
+        "name": "Banshee, Resonating Quake",
+        "img": "assets/mods/augment/banshee/Resonating Quake.png"
+    },
+    {
+        "name": "Chroma, Afterburn",
+        "img": "assets/mods/augment/chroma/Afterburn.png"
+    },
+    {
+        "name": "Chroma, Everlasting Ward",
+        "img": "assets/mods/augment/chroma/Everlasting Ward.png"
+    },
+    {
+        "name": "Chroma, Vexing Retaliation",
+        "img": "assets/mods/augment/chroma/Vexing Retaliation.png"
+    },
+    {
+        "name": "Chroma, Guided Effigy",
+        "img": "assets/mods/augment/chroma/Guided Effigy.png"
+    },
+    {
+        "name": "Ember, Fireball Frenzy",
+        "img": "assets/mods/augment/ember/Fireball Frenzy.png"
+    },
+    {
+        "name": "Ember, Flash Accelerant",
+        "img": "assets/mods/augment/ember/Flash Accelerant.png"
+    },
+    {
+        "name": "Ember, Fire Fright",
+        "img": "assets/mods/augment/ember/Fire Fright.png"
+    },
+    {
+        "name": "Ember, Firequake",
+        "img": "assets/mods/augment/ember/Firequake.png"
+    },
+    {
+        "name": "Equinox, Duality",
+        "img": "assets/mods/augment/equinox/Duality.png"
+    },
+    {
+        "name": "Equinox, Calm & Frenzy",
+        "img": "assets/mods/augment/equinox/Calm & Frenzy.png"
+    },
+    {
+        "name": "Equinox, Peaceful Provocation",
+        "img": "assets/mods/augment/equinox/Peaceful Provocation.png"
+    },
+    {
+        "name": "Equinox, Energy Transfer",
+        "img": "assets/mods/augment/equinox/Energy Transfer.png"
+    },
+    {
+        "name": "Excalibur, Surging Dash",
+        "img": "assets/mods/augment/excalibur/Surging Dash.png"
+    },
+    {
+        "name": "Excalibur, Radiant Finish",
+        "img": "assets/mods/augment/excalibur/Radiant Finish.png"
+    },
+    {
+        "name": "Excalibur, Furious Javelin",
+        "img": "assets/mods/augment/excalibur/Furious Javelin.png"
+    },
+    {
+        "name": "Excalibur, Chromatic Blade",
+        "img": "assets/mods/augment/excalibur/Chromatic Blade.png"
+    },
+    {
+        "name": "Frost, Freeze Force",
+        "img": "assets/mods/augment/frost/Freeze Force.png"
+    },
+    {
+        "name": "Frost, Ice Wave Impedance",
+        "img": "assets/mods/augment/frost/Ice Wave Impedance.png"
+    },
+    {
+        "name": "Frost, Chilling Globe",
+        "img": "assets/mods/augment/frost/Chilling Globe.png"
+    },
+    {
+        "name": "Frost, Icy Avalanche",
+        "img": "assets/mods/augment/frost/Icy Avalanche.png"
+    },
+    {
+        "name": "Gara, Mending Splinters",
+        "img": "assets/mods/augment/gara/Mending Splinters.png"
+    },
+    {
+        "name": "Harrow, Lasting Covenant",
+        "img": "assets/mods/augment/harrow/Lasting Covenant.png"
+    },
+    {
+        "name": "Hyroid, Corroding Barrage",
+        "img": "assets/mods/augment/hydroid/Corroding Barrage.png"
+    },
+    {
+        "name": "Hydroid, Tidal Impunity",
+        "img": "assets/mods/augment/hydroid/Tidal Impunity.png"
+    },
+    {
+        "name": "Hydroid, Curative Undertow",
+        "img": "assets/mods/augment/hydroid/Curative Undertow.png"
+    },
+    {
+        "name": "Hydroid, Pilfering Swarm",
+        "img": "assets/mods/augment/hydroid/Pilfering Swarm.png"
+    },
+    {
+        "name": "Inaros, Elemental Sandstorm",
+        "img": "assets/mods/augment/inaros/Elemental Sandstorm.png"
+    },
+    {
+        "name": "Inaros, Negation Swarm",
+        "img": "assets/mods/augment/inaros/Negation Swarm.png"
+    },
+    {
+        "name": "Ivara, Piercing Navigator",
+        "img": "assets/mods/augment/ivara/Piercing Navigator.png"
+    },
+    {
+        "name": "Ivara, Infiltrate",
+        "img": "assets/mods/augment/ivara/Infiltrate.png"
+    },
+    {
+        "name": "Ivara, Concentrated Arrow",
+        "img": "assets/mods/augment/ivara/Concentrated Arrow.png"
+    },
+    {
+        "name": "Khora, Accumulating Whipclaw",
+        "img": "assets/mods/augment/khora/Accumulating Whipclaw.png"
+    },
+    {
+        "name": "Limbo, Haven",
+        "img": "assets/mods/augment/limbo/Haven.png"
+    },
+    {
+        "name": "Limbo, Rift Torrent",
+        "img": "assets/mods/augment/limbo/Rift Torrent.png"
+    },
+    {
+        "name": "Limbo, Cataclysmic Continuum",
+        "img": "assets/mods/augment/limbo/Cataclysmic Continuum.png"
+    },
+    {
+        "name": "Loki, Savior Decoy",
+        "img": "assets/mods/augment/loki/Savior Decoy.png"
+    },
+    {
+        "name": "Loki, Hushed Invisibility",
+        "img": "assets/mods/augment/loki/Hushed Invisibility.png"
+    },
+    {
+        "name": "Loki, Safeguard Switch",
+        "img": "assets/mods/augment/loki/Safeguard Switch.png"
+    },
+    {
+        "name": "Loki, Irradiating Disarm",
+        "img": "assets/mods/augment/loki/Irradiating Disarm.png"
+    },
+    {
+        "name": "Mag, Greedy Pull",
+        "img": "assets/mods/augment/mag/Greedy Pull.png"
+    },
+    {
+        "name": "Mag, Magnetized Discharge",
+        "img": "assets/mods/augment/mag/Magnetized Discharge.png"
+    },
+    {
+        "name": "Mag, Counter Pulse",
+        "img": "assets/mods/augment/mag/Counter Pulse.png"
+    },
+    {
+        "name": "Mag, Fracturing Crush",
+        "img": "assets/mods/augment/mag/Fracturing Crush.png"
+    },
+    {
+        "name": "Mesa, Ballistic Bullseye",
+        "img": "assets/mods/augment/mesa/Ballistic Bullseye.png"
+    },
+    {
+        "name": "Mesa, Muzzle Flash",
+        "img": "assets/mods/augment/mesa/Muzzle Flash.png"
+    },
+    {
+        "name": "Mesa, Staggering Shield",
+        "img": "assets/mods/augment/mesa/Staggering Shield.png"
+    },
+    {
+        "name": "Mesa, Mesa's Waltz",
+        "img": "assets/mods/augment/mesa/Mesa's Waltz.png"
+    },
+    {
+        "name": "Mirage, Hall of Malevolence",
+        "img": "assets/mods/augment/mirage/Hall of Malevolence.png"
+    },
+    {
+        "name": "Mirage, Explosive Legerdemain",
+        "img": "assets/mods/augment/mirage/Explosive Legerdemain.png"
+    },
+    {
+        "name": "Mirage, Total Eclipse",
+        "img": "assets/mods/augment/mirage/Total Eclipse.png"
+    },
+    {
+        "name": "Nekros, Soul Survivor",
+        "img": "assets/mods/augment/nekros/Soul Survivor.png"
+    },
+    {
+        "name": "Nekros, Creeping Terrify",
+        "img": "assets/mods/augment/nekros/Creeping Terrify.png"
+    },
+    {
+        "name": "Nekros, Despoil",
+        "img": "assets/mods/augment/nekros/Despoil.png"
+    },
+    {
+        "name": "Nekros, Shield of Shadows",
+        "img": "assets/mods/augment/nekros/Shield of Shadows.png"
+    },
+    {
+        "name": "Nezha, Pyroclastic Flow",
+        "img": "assets/mods/augment/nezha/Pyroclastic Flow.png"
+    },
+    {
+        "name": "Nezha, Reaping Chakram",
+        "img": "assets/mods/augment/nezha/Reaping Chakram.png"
+    },
+    {
+        "name": "Nezha, Safeguard",
+        "img": "assets/mods/augment/nezha/Safeguard.png"
+    },
+    {
+        "name": "Nidus, Larva Burst",
+        "img": "assets/mods/augment/nidus/Larva Burst.png"
+    },
+    {
+        "name": "Nova, Neutron Star",
+        "img": "assets/mods/augment/nova/Neutron Star.png"
+    },
+    {
+        "name": "Nova, Antimatter Absorb",
+        "img": "assets/mods/augment/nova/Antimatter Absorb.png"
+    },
+    {
+        "name": "Nova, Escape Velocity",
+        "img": "assets/mods/augment/nova/Escape Velocity.png"
+    },
+    {
+        "name": "Nyx, Mind Freak",
+        "img": "assets/mods/augment/nyx/Mind Freak.png"
+    },
+    {
+        "name": "Nyx, Pacifying Bolts",
+        "img": "assets/mods/augment/nyx/Pacifying Bolts.png"
+    },
+    {
+        "name": "Nyx, Chaos Sphere",
+        "img": "assets/mods/augment/nyx/Chaos Sphere.png"
+    },
+    {
+        "name": "Nyx, Assimilate",
+        "img": "assets/mods/augment/nyx/Assimilate.png"
+    },
+    {
+        "name": "Oberon, Smite Infusion",
+        "img": "assets/mods/augment/oberon/Smite Infusion.png"
+    },
+    {
+        "name": "Oberon, Hallowed Eruption",
+        "img": "assets/mods/augment/oberon/Hallowed Eruption.png"
+    },
+    {
+        "name": "Oberon, Phoenix Renewal",
+        "img": "assets/mods/augment/oberon/Phoenix Renewal.png"
+    },
+    {
+        "name": "Oberon, Hallowed Reckoning",
+        "img": "assets/mods/augment/oberon/Hallowed Reckoning.png"
+    },
+    {
+        "name": "Octavia, Conductor",
+        "img": "assets/mods/augment/octavia/Conductor.png"
+    },
+    {
+        "name": "Rhino, Ironclad Charge",
+        "img": "assets/mods/augment/rhino/Ironclad Charge.png"
+    },
+    {
+        "name": "Rhino, Iron Shrapnel",
+        "img": "assets/mods/augment/rhino/Iron Shrapnel.png"
+    },
+    {
+        "name": "Rhino, Piercing Roar",
+        "img": "assets/mods/augment/rhino/Piercing Roar.png"
+    },
+    {
+        "name": "Rhino, Reinforcing Stomp",
+        "img": "assets/mods/augment/rhino/Reinforcing Stomp.png"
+    },
+    {
+        "name": "Saryn, Venom Dose",
+        "img": "assets/mods/augment/saryn/Venom Dose.png"
+    },
+    {
+        "name": "Saryn, Regnerative Molt",
+        "img": "assets/mods/augment/saryn/Regenerative Molt.png"
+    },
+    {
+        "name": "Saryn, Contagion Cloud",
+        "img": "assets/mods/augment/saryn/Contagion Cloud.png"
+    },
+    {
+        "name": "Titania, Beguiling Lantern",
+        "img": "assets/mods/augment/titania/Beguiling Lantern.png"
+    },
+    {
+        "name": "Titania, Razorwing Blitz",
+        "img": "assets/mods/augment/titania/Razorwing Blitz.png"
+    },
+    {
+        "name": "Trinity, Pool of Life",
+        "img": "assets/mods/augment/trinity/Pool of Life.png"
+    },
+    {
+        "name": "Trinity, Vampire Leech",
+        "img": "assets/mods/augment/trinity/Vampire Leech.png"
+    },
+    {
+        "name": "Trinity, Abating Link",
+        "img": "assets/mods/augment/trinity/Abating Link.png"
+    },
+    {
+        "name": "Valkyr, Swing Line",
+        "img": "assets/mods/augment/valkyr/Swing Line.png"
+    },
+    {
+        "name": "Valkyr, Eternal War",
+        "img": "assets/mods/augment/valkyr/Eternal War.png"
+    },
+    {
+        "name": "Valkyr, Prolonged Paralysis",
+        "img": "assets/mods/augment/valkyr/Prolonged Paralysis.png"
+    },
+    {
+        "name": "Valkyr, Hysterical Assault",
+        "img": "assets/mods/augment/valkyr/Hysterical Assault.png"
+    },
+    {
+        "name": "Vauban, Tesla Link",
+        "img": "assets/mods/augment/vauban/Tesla Link.png"
+    },
+    {
+        "name": "Vauban, Repelling Bastille",
+        "img": "assets/mods/augment/vauban/Repelling Bastille.png"
+    },
+    {
+        "name": "Vauban, Perpetual Vortex",
+        "img": "assets/mods/augment/vauban/Perpetual Vortex.png"
+    },
+    {
+        "name": "Volt, Shock Trooper",
+        "img": "assets/mods/augment/volt/Shock Trooper.png"
+    },
+    {
+        "name": "Volt, Shocking Speed",
+        "img": "assets/mods/augment/volt/Shocking Speed.png"
+    },
+    {
+        "name": "Volt, Transistor Shield",
+        "img": "assets/mods/augment/volt/Transistor Shield.png"
+    },
+    {
+        "name": "Volt, Capacitance",
+        "img": "assets/mods/augment/volt/Capacitance.png"
+    },
+    {
+        "name": "Wukong, Iron Vault",
+        "img": "assets/mods/augment/wukong/Iron Vault.png"
+    },
+    {
+        "name": "Wukong, Enveloping Cloud",
+        "img": "assets/mods/augment/wukong/Enveloping Cloud.png"
+    },
+    {
+        "name": "Wukong, Primal Rage",
+        "img": "assets/mods/augment/wukong/Primal Rage.png"
+    },
+    {
+        "name": "Zephyr, Target Fixation",
+        "img": "assets/mods/augment/zephyr/Target Fixation.png"
+    },
+    {
+        "name": "Zephyr, Jet Stream",
+        "img": "assets/mods/augment/zephyr/Jet Stream.png"
+    },
+    {
+        "name": "Zephyr, Funnel Clouds",
+        "img": "assets/mods/augment/zephyr/Funnel Clouds.png"
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Afterburner",
+        "img": "assets/mods/archwing/Afterburner.png"
+    },
+    {
+        "name": "Argon Plating",
+        "img": "assets/mods/archwing/Argon Plating.png"
+    },
+    {
+        "name": "Auxiliary Power",
+        "img": "assets/mods/archwing/Auxiliary Power.png"
+    },
+    {
+        "name": "Cold Snap",
+        "img": "assets/mods/archwing/Cold Snap.png"
+    },
+    {
+        "name": "Efficient Transferral",
+        "img": "assets/mods/archwing/Efficient Transferral.png"
+    },
+    {
+        "name": "Energy Amplifier",
+        "img": "assets/mods/archwing/Energy Amplifier.png"
+    },
+    {
+        "name": "Energy Inversion",
+        "img": "assets/mods/archwing/Energy Inversion.png"
+    },
+    {
+        "name": "Enhanced Durability",
+        "img": "assets/mods/archwing/Enhanced Durability.png"
+    },
+    {
+        "name": "Hyperion Thrusters",
+        "img": "assets/mods/archwing/Hyperion Thrusters.png"
+    },
+    {
+        "name": "Kinetic Diversion",
+        "img": "assets/mods/archwing/Kinetic Diversion.png"
+    },
+    {
+        "name": "Morphic Transformer",
+        "img": "assets/mods/archwing/Morphic Transformer.png"
+    },
+    {
+        "name": "Primed Morphic Transformer",
+        "img": "assets/mods/archwing/Primed Morphic Transformer.png"
+    },
+    {
+        "name": "Superior Defenses",
+        "img": "assets/mods/archwing/Superior Defenses.png"
+    },
+    {
+        "name": "System Reroute",
+        "img": "assets/mods/archwing/System Reroute.png"
+    }
+]

@@ -1,0 +1,52 @@
+itemgrid-dark {
+    .itemgrid-dark-title {
+        display: block;
+        position: sticky;
+        top: 0px;
+        padding-left: 10px;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        color: white;
+        font-size: 17px;
+        font-family: "Raleway", "Roboto", "Helvetica", sans-serif;
+        background-color: map-get($colors, secondary);
+    }
+
+    .itemgrid-dark-grid {
+        margin: 0;
+        margin-top: -20px; /* Substract from 'li margin-top' so the list aligns to the top while the items keep their spacing */
+        margin-bottom: 40px; /* Extra spacing at the end of the list */
+        padding: 0;
+        padding-left: 4px; padding-right: 4px; /* Spacing to the left and right edges of the screen */
+
+        display: grid;
+        grid-gap: 8px; /* Gap between columns */
+        grid-template-columns: repeat(auto-fill, 106px); /* 100px (Image size) + 6px (Border size) + 8px (Spacing) */
+        justify-content: space-around;
+
+        list-style: none;
+        li {
+            margin-top: 27px;
+            width: 100px;
+            height: 100px;
+            border-radius: 20%;
+            background-color: rgb(27, 27, 28);
+
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+            }
+
+            span {
+                display: block;
+                width: 100%;
+                text-align: center;
+                color: white;
+                font-size: 14px;
+                font-family: "Raleway", "Roboto", "Helvetica", sans-serif;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Brief Respite",
+        "img": "assets/mods/aura/Brief Respite.png"
+    },
+    {
+        "name": "Corrosive Projection",
+        "img": "assets/mods/aura/Corrosive Projection.png"
+    },
+    {
+        "name": "Deady Eye",
+        "img": "assets/mods/aura/Dead Eye.png"
+    },
+    {
+        "name": "EMP Aura",
+        "img": "assets/mods/aura/EMP Aura.png"
+    },
+    {
+        "name": "Empowered Blades",
+        "img": "assets/mods/aura/Empowered Blades.png"
+    },
+    {
+        "name": "Enemy Radar",
+        "img": "assets/mods/aura/Enemy Radar.png"
+    },
+    {
+        "name": "Energy Siphon",
+        "img": "assets/mods/aura/Energy Siphon.png"
+    },
+    {
+        "name": "Growing Power",
+        "img": "assets/mods/aura/Growing Power.png"
+    },
+    {
+        "name": "Infested Impedance",
+        "img": "assets/mods/aura/Infested Impedance.png"
+    },
+    {
+        "name": "Loot Detector",
+        "img": "assets/mods/aura/Loot Detector.png"
+    },
+    {
+        "name": "Physique",
+        "img": "assets/mods/aura/Physique.png"
+    },
+    {
+        "name": "Pistol Amp",
+        "img": "assets/mods/aura/Pistol Amp.png"
+    },
+    {
+        "name": "Pistol Scavenger",
+        "img": "assets/mods/aura/Pistol Scavenger.png"
+    },
+    {
+        "name": "Rejuvenation",
+        "img": "assets/mods/aura/Rejuvenation.png"
+    },
+    {
+        "name": "Rifle Amp",
+        "img": "assets/mods/aura/Rifle Amp.png"
+    },
+    {
+        "name": "Rifle Scavenger",
+        "img": "assets/mods/aura/Rifle Scavenger.png"
+    },
+    {
+        "name": "Shield Disruption",
+        "img": "assets/mods/aura/Shield Disruption.png"
+    },
+    {
+        "name": "Shotgun Amp",
+        "img": "assets/mods/aura/Shotgun Amp.png"
+    },
+    {
+        "name": "Shotgun Scavenger",
+        "img": "assets/mods/aura/Shotgun Scavenger.png"
+    },
+    {
+        "name": "Sniper Scavenger",
+        "img": "assets/mods/aura/Sniper Scavenger.png"
+    },
+    {
+        "name": "Speed Holster",
+        "img": "assets/mods/aura/Speed Holster.png"
+    },
+    {
+        "name": "Sprint Boost",
+        "img": "assets/mods/aura/Sprint Boost.png"
+    },
+    {
+        "name": "Stand United",
+        "img": "assets/mods/aura/Stand United.png"
+    },
+    {
+        "name": "Steel Charge",
+        "img": "assets/mods/aura/Steel Charge.png"
+    },
+    {
+        "name": "Toxin Resistance",
+        "img": "assets/mods/aura/Toxin Resistance.png"
+    }
+]

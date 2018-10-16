@@ -1,0 +1,242 @@
+[
+	{
+		"name": "Agile Aim",
+		"img": "assets/mods/primary/rifle/Agile Aim.png"
+	},
+	{
+		"name": "Ammo Drum",
+		"img": "assets/mods/primary/rifle/Ammo Drum.png"
+	},
+	{
+		"name": "Argon Scope",
+		"img": "assets/mods/primary/rifle/Argon Scope.png"
+	},
+	{
+		"name": "Bane of Corpus",
+		"img": "assets/mods/primary/rifle/Bane of Corpus.png"
+	},
+	{
+		"name": "Bane of Grineer",
+		"img": "assets/mods/primary/rifle/Bane of Grineer.png"
+	},
+	{
+		"name": "Bane of Infested",
+		"img": "assets/mods/primary/rifle/Bane of Infested.png"
+	},
+	{
+		"name": "Bladed Rounds",
+		"img": "assets/mods/primary/rifle/Bladed Rounds.png"
+	},
+	{
+		"name": "Catalyzer Link",
+		"img": "assets/mods/primary/rifle/Catalyzer Link.png"
+	},
+	{
+		"name": "Combustion Beam",
+		"img": "assets/mods/primary/rifle/Combustion Beam.png"
+	},
+	{
+		"name": "Continuous Misery",
+		"img": "assets/mods/primary/rifle/Continuous Misery.png"
+	},
+	{
+		"name": "Crash Course",
+		"img": "assets/mods/primary/rifle/Crash Course.png"
+	},
+	{
+		"name": "Critical Delay",
+		"img": "assets/mods/primary/rifle/Critical Delay.png"
+	},
+	{
+		"name": "Cyro Rounds",
+		"img": "assets/mods/primary/rifle/Cryo Rounds.png"
+	},
+	{
+		"name": "Eagle Eye",
+		"img": "assets/mods/primary/rifle/Eagle Eye.png"
+	},
+	{
+		"name": "Fanged Fusillade",
+		"img": "assets/mods/primary/rifle/Fanged Fusillade.png"
+	},
+	{
+		"name": "Fast Hands",
+		"img": "assets/mods/primary/rifle/Fast Hands.png"
+	},
+	{
+		"name": "Firestorm",
+		"img": "assets/mods/primary/rifle/Firestorm.png"
+	},
+	{
+		"name": "Hammer Shot",
+		"img": "assets/mods/primary/rifle/Hammer Shot.png"
+	},
+	{
+		"name": "Heavy Caliber",
+		"img": "assets/mods/primary/rifle/Heavy Caliber.png"
+	},
+	{
+		"name": "Hellfire",
+		"img": "assets/mods/primary/rifle/Hellfire.png"
+	},
+	{
+		"name": "High Voltage",
+		"img": "assets/mods/primary/rifle/High Voltage.png"
+	},
+	{
+		"name": "Hush",
+		"img": "assets/mods/primary/rifle/Hush.png"
+	},
+	{
+		"name": "Infected Clip",
+		"img": "assets/mods/primary/rifle/Infected Clip.png"
+	},
+	{
+		"name": "Magazine Warp",
+		"img": "assets/mods/primary/rifle/Magazine Warp.png"
+	},
+	{
+		"name": "Malignant Force",
+		"img": "assets/mods/primary/rifle/Malignant Force.png"
+	},
+	{
+		"name": "Metal Auger",
+		"img": "assets/mods/primary/rifle/Metal Auger.png"
+	},
+	{
+		"name": "Piercing Caliber",
+		"img": "assets/mods/primary/rifle/Piercing Caliber.png"
+	},
+	{
+		"name": "Piercing Hit",
+		"img": "assets/mods/primary/rifle/Piercing Hit.png"
+	},
+	{
+		"name": "Point Strike",
+		"img": "assets/mods/primary/rifle/Point Strike.png"
+	},
+	{
+		"name": "Primed Bane of Corpus",
+		"img": "assets/mods/primary/rifle/Primed Bane of Corpus.png"
+	},
+	{
+		"name": "Primed Bane of Grineer",
+		"img": "assets/mods/primary/rifle/Primed Bane of Grineer.png"
+	},
+	{
+		"name": "Primed Bane of Infested",
+		"img": "assets/mods/primary/rifle/Primed Bane of Infested.png"
+	},
+	{
+		"name": "Primed Cryo Rounds",
+		"img": "assets/mods/primary/rifle/Primed Cryo Rounds.png"
+	},
+	{
+		"name": "Primed Fast Hands",
+		"img": "assets/mods/primary/rifle/Primed Fast Hands.png"
+	},
+	{
+		"name": "Primed Shred",
+		"img": "assets/mods/primary/rifle/Primed Shred.png"
+	},
+	{
+		"name": "Rifle Aptitude",
+		"img": "assets/mods/primary/rifle/Rifle Aptitude.png"
+	},
+	{
+		"name": "Rime Rounds",
+		"img": "assets/mods/primary/rifle/Rime Rounds.png"
+	},
+	{
+		"name": "Rupture",
+		"img": "assets/mods/primary/rifle/Rupture.png"
+	},
+	{
+		"name": "Sawtooth Clip",
+		"img": "assets/mods/primary/rifle/Sawtooth Clip.png"
+	},
+	{
+		"name": "Serration",
+		"img": "assets/mods/primary/rifle/Serration.png"
+	},
+	{
+		"name": "Shred",
+		"img": "assets/mods/primary/rifle/Shred.png"
+	},
+	{
+		"name": "Sinister Reach",
+		"img": "assets/mods/primary/rifle/Sinister Reach.png"
+	},
+	{
+		"name": "Speed Trigger",
+		"img": "assets/mods/primary/rifle/Speed Trigger.png"
+	},
+	{
+		"name": "Split Champer",
+		"img": "assets/mods/primary/rifle/Split Chamber.png"
+	},
+	{
+		"name": "Stabilizer",
+		"img": "assets/mods/primary/rifle/Stabilizer.png"
+	},
+	{
+		"name": "Stormbringer",
+		"img": "assets/mods/primary/rifle/Stormbringer.png"
+	},
+	{
+		"name": "Terminal Velocity",
+		"img": "assets/mods/primary/rifle/Terminal Velocity.png"
+	},
+	{
+		"name": "Thermite Rounds",
+		"img": "assets/mods/primary/rifle/Thermite Rounds.png"
+	},
+	{
+		"name": "Twitch",
+		"img": "assets/mods/primary/rifle/Twitch.png"
+	},
+	{
+		"name": "Vile Acceleration",
+		"img": "assets/mods/primary/rifle/Vile Acceleration.png"
+	},
+	{
+		"name": "Vile Precision",
+		"img": "assets/mods/primary/rifle/Vile Precision.png"
+	},
+	{
+		"name": "Vital Sense",
+		"img": "assets/mods/primary/rifle/Vital Sense.png"
+	},
+	{
+		"name": "Wildfire",
+		"img": "assets/mods/primary/rifle/Wildfire.png"
+	},
+	{
+		"name": "Guided Ordnance",
+		"img": "assets/mods/primary/rifle/assault/Guided Ordnance.png"
+	},
+	{
+		"name": "Gun Glide",
+		"img": "assets/mods/primary/rifle/assault/Gun Glide.png"
+	},
+	{
+		"name": "Primed Rifle Ammo Mutation",
+		"img": "assets/mods/primary/rifle/assault/Primed Rifle Ammo Mutation.png"
+	},
+	{
+		"name": "Rifle Ammo Mutation",
+		"img": "assets/mods/primary/rifle/assault/Rifle Ammo Mutation.png"
+	},
+	{
+		"name": "Spring-Loaded Chamber",
+		"img": "assets/mods/primary/rifle/assault/Spring-Loaded Chamber.png"
+	},
+	{
+		"name": "Tactical Reload",
+		"img": "assets/mods/primary/rifle/assault/Tactical Reload.png"
+	},
+	{
+		"name": "Tainted Mag",
+		"img": "assets/mods/primary/rifle/assault/Tainted Mag.png"
+	}
+]

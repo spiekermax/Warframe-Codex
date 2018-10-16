@@ -1,0 +1,81 @@
+[
+    {
+        "name": "Huras",
+        "img": "assets/companions/pets/kubrows/Huras Kubrow.png",
+        "health": "75 (225 at rank 30)",
+        "shield": "125 (375 at rank 30)",
+        "armor": "50",
+        "power": "100",
+        "damage": "304.0 Slash",
+        "crit": "10.0%",
+        "critdmg": "3.0x",
+        "status": "5.0%",
+        "polarities": "<span class='wficons-penjaga'></span><span class='wficons-penjaga'></span><span class='wficons-madurai'></span>"
+    },
+    {
+        "name": "Raksa",
+        "img": "assets/companions/pets/kubrows/Raksa Kubrow.png",
+        "health": "100 (300 at rank 30)",
+        "shield": "100 (300 at rank 30)",
+        "armor": "50",
+        "power": "100",
+        "damage": "304.0 Slash",
+        "crit": "10.0%",
+        "critdmg": "3.0x",
+        "status": "5.0%",
+        "polarities": "<span class='wficons-penjaga'></span><span class='wficons-penjaga'></span><span class='wficons-vazarin'></span>"
+    },
+    {
+        "name": "Sahasa",
+        "img": "assets/companions/pets/kubrows/Sahasa Kubrow.png",
+        "health": "125 (375 at rank 30)",
+        "shield": "75 (225 at rank 30)",
+        "armor": "50",
+        "power": "100",
+        "damage": "304.0 Slash",
+        "crit": "10.0%",
+        "critdmg": "3.0x",
+        "status": "5.0%",
+        "polarities": "<span class='wficons-penjaga'></span><span class='wficons-penjaga'></span><span class='wficons-vazarin'></span>"
+    },
+    {
+        "name": "Sunika",
+        "img": "assets/companions/pets/kubrows/Sunika Kubrow.png",
+        "health": "110 (330 at rank 30)",
+        "shield": "90 (270 at rank 30)",
+        "armor": "50",
+        "power": "100",
+        "damage": "304.0 Slash",
+        "crit": "10.0%",
+        "critdmg": "3.0x",
+        "status": "5.0%",
+        "polarities": "<span class='wficons-penjaga'></span><span class='wficons-penjaga'></span><span class='wficons-madurai'></span>"
+    },
+    {
+        "name": "Chesa",
+        "img": "assets/companions/pets/kubrows/Chesa Kubrow.png",
+        "health": "125 (375 at rank 30)",
+        "shield": "75 (225 at rank 30)",
+        "armor": "50",
+        "power": "100",
+        "damage": "304.0 Slash",
+        "crit": "10.0%",
+        "critdmg": "3.0x",
+        "status": "5.0%",
+        "polarities": "<span class='wficons-penjaga'></span><span class='wficons-penjaga'></span><span class='wficons-vazarin'></span>"
+    },
+    {
+        "name": "Helminth Charger",
+        "img": "assets/companions/pets/kubrows/Helminth Charger.png",
+        "fontSize": "12px",
+        "health": "95 (285 at rank 30)",
+        "shield": "85 (255 at rank 30)",
+        "armor": "50",
+        "power": "100",
+        "damage": "304.0 Slash + 45.6 Toxin",
+        "crit": "10.0%",
+        "critdmg": "3.0x",
+        "status": "5.0%",
+        "polarities": "<span class='wficons-penjaga'></span><span class='wficons-penjaga'></span><span class='wficons-madurai'></span>"
+    }
+]

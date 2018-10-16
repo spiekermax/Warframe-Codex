@@ -1,0 +1,28 @@
+alert-state {
+
+    .component-content {
+        margin-left: 10px;
+        margin-right: 10px;
+
+        h4 {
+            color: map-get($colors, secondary);
+        }
+
+        .content-error {
+            color: map-get($colors, semi-dark);
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .content-rewards {
+            font-size: 14px;
+            color: map-get($colors, semi-light);
+        }
+
+        .content-seperator {
+            background-color: map-get($colors, semi-dark);
+        }
+    }
+
+}

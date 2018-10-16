@@ -1,0 +1,93 @@
+<ion-header>
+
+  <ion-navbar [@fadeAnimation] [@.disabled]="!this.animationsEnabled" *ngIf="this.displayMode == 'wiki'">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{appConfigs.wikiTitle}}</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="this.openSearchbar($event)">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-navbar [@fadeAnimation] [@.disabled]="!this.animationsEnabled" *ngIf="this.displayMode == 'search'">
+    <ion-buttons left>
+      <button ion-button icon-only style="padding: 0 6px" (click)="this.onSearchbarBackButtonAction($event)">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar #searchbar (ionFocus)="this.onSearchbarFocus($event)" (ionInput)="this.updateItemFilter($event)"></ion-searchbar>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="this.openFilterTool($event)" *ngIf="this.displayMode == 'search'">
+        <ion-icon><span class="wficons-filter"></span></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+  
+<ion-content class="page-content">
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Warframes')">
+    <itemgrid-framed [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Normal' : 'Warframes: Normal'" [itemSource]="'assets/data/warframes/warframes-normal.json'" [itemFilter]="this.itemFilter" (itemClick)="openWarframeInfo($event)"></itemgrid-framed>
+    <itemgrid-framed [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Prime' : 'Warframes: Prime'" [itemSource]="'assets/data/warframes/warframes-normal.json'" [itemExtend]="'assets/data/warframes/warframes-prime.json'" [itemFilter]="this.itemFilter" (itemClick)="openWarframeInfo($event)"></itemgrid-framed>
+    <itemgrid-framed [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Umbra' : 'Warframes: Umbra'" [itemSource]="'assets/data/warframes/warframes-normal.json'" [itemExtend]="'assets/data/warframes/warframes-umbra.json'" [itemFilter]="this.itemFilter" (itemClick)="openWarframeInfo($event)"></itemgrid-framed>
+  </div>
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Companions')">
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Kavats' : 'Companions: Kavats'" [itemSource]="'assets/data/companions/companions-pets-kavats.json'" [itemFilter]="this.itemFilter" (itemClick)="openPetInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Kubrows' : 'Companions: Kubrows'" [itemSource]="'assets/data/companions/companions-pets-kubrows.json'" [itemFilter]="this.itemFilter" (itemClick)="openPetInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Sentinels' : 'Companions: Sentinels'" [itemSource]="'assets/data/companions/companions-sentinels.json'" [itemFilter]="this.itemFilter" (itemClick)="openSentinelInfo($event)"></itemgrid-dark>
+  </div>
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Primary Weapons')">
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Bows' : 'Weapons: Bows'" [itemSource]="'assets/data/weapons/weapons-primary-bows.json'" [itemFilter]="this.itemFilter" (itemClick)="openGunInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Launchers' : 'Weapons: Launchers'" [itemSource]="'assets/data/weapons/weapons-primary-launchers.json'" [itemFilter]="this.itemFilter" (itemClick)="openGunInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Rifles' : 'Weapons: Rifles'" [itemSource]="'assets/data/weapons/weapons-primary-rifles.json'" [itemFilter]="this.itemFilter" (itemClick)="openGunInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Shotguns' : 'Weapons: Shotguns'" [itemSource]="'assets/data/weapons/weapons-primary-shotguns.json'" [itemFilter]="this.itemFilter" (itemClick)="openGunInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Snipers' : 'Weapons: Snipers'" [itemSource]="'assets/data/weapons/weapons-primary-snipers.json'" [itemFilter]="this.itemFilter" (itemClick)="openGunInfo($event)"></itemgrid-dark>
+  </div>
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Secondary Weapons')">
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Single' : 'Weapons: Single'" [itemSource]="'assets/data/weapons/weapons-secondary-single.json'" [itemFilter]="this.itemFilter" (itemClick)="openGunInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Dual' : 'Weapons: Dual'" [itemSource]="'assets/data/weapons/weapons-secondary-dual.json'" [itemFilter]="this.itemFilter" (itemClick)="openGunInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Thrown' : 'Weapons: Thrown'" [itemSource]="'assets/data/weapons/weapons-secondary-thrown.json'" [itemFilter]="this.itemFilter" (itemClick)="openGunInfo($event)"></itemgrid-dark>
+  </div>
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Melee Weapons')">
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Brawlers' : 'Weapons: Brawlers'" [itemSource]="'assets/data/weapons/weapons-melee-brawlers.json'" [itemFilter]="this.itemFilter" (itemClick)="openMeleeInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Daggers' : 'Weapons: Daggers'" [itemSource]="'assets/data/weapons/weapons-melee-daggers.json'" [itemFilter]="this.itemFilter" (itemClick)="openMeleeInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Heavy' : 'Weapons: Heavy'" [itemSource]="'assets/data/weapons/weapons-melee-heavy.json'" [itemFilter]="this.itemFilter" (itemClick)="openMeleeInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Misc' : 'Weapons: Misc'" [itemSource]="'assets/data/weapons/weapons-melee-misc.json'" [itemFilter]="this.itemFilter" (itemClick)="openMeleeInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Poles' : 'Weapons: Poles'" [itemSource]="'assets/data/weapons/weapons-melee-poles.json'" [itemFilter]="this.itemFilter" (itemClick)="openMeleeInfo($event)"></itemgrid-dark>
+    <itemgrid-dark [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Swords' : 'Weapons: Swords'" [itemSource]="'assets/data/weapons/weapons-melee-swords.json'" [itemFilter]="this.itemFilter" (itemClick)="openMeleeInfo($event)"></itemgrid-dark>
+  </div>
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Archwing Mods')">
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Archwing' : 'Mods: Archwing'" [itemSource]="'assets/data/mods/mods-archwing.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+  </div>
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Companion Mods')">
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Pet' : 'Mods: Pet'" [itemSource]="'assets/data/mods/mods-companion-pet.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Sentinel' : 'Mods: Sentinel'" [itemSource]="'assets/data/mods/mods-companion-sentinel.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+  </div>
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Warframe Mods')">
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Aura' : 'Mods: Aura'" [itemSource]="'assets/data/mods/mods-warframe-aura.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Warframe' : 'Mods: Warframe'" [itemSource]="'assets/data/mods/mods-warframe-warframe.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Augment' : 'Mods: Augment'" [itemSource]="'assets/data/mods/mods-warframe-augment.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+  </div>
+
+  <div class="content-section" [hidden]="!appConfigs.getWikiSectionFilter().includes('Weapon Mods')">
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Bow' : 'Mods: Bow'" [itemSource]="'assets/data/mods/mods-weapon-bow.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Melee' : 'Mods: Melee'" [itemSource]="'assets/data/mods/mods-weapon-melee.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Pistol' : 'Mods: Pistol'" [itemSource]="'assets/data/mods/mods-weapon-pistol.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Rifle' : 'Mods: Rifle'" [itemSource]="'assets/data/mods/mods-weapon-rifle.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Shotgun' : 'Mods: Shotgun'" [itemSource]="'assets/data/mods/mods-weapon-shotgun.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Sniper' : 'Mods: Sniper'" [itemSource]="'assets/data/mods/mods-weapon-sniper.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+    <itemgrid-pure [title]="this.appConfigs.getWikiSectionFilter().length == 1 ? 'Stance' : 'Mods: Stance'" [itemSource]="'assets/data/mods/mods-weapon-stance.json'" [itemFilter]="this.itemFilter"></itemgrid-pure>
+  </div>
+
+</ion-content>

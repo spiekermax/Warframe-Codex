@@ -1,0 +1,14 @@
+[
+    {
+        "id": "6",
+        "name": "Excalibur Umbra",
+        "img": "assets/warframes/umbra/ExcaliburUmbraFace.png",
+        "fontSize": "12px",
+        "armor": "300 (+)",
+        "energy": "150 (225 at rank 30) (+)",
+        "polarities": "<span class='wficons-madurai'></span><span class='wficons-umbra'></span><span class='wficons-umbra'></span><span class='wficons-umbra'></span> (+/-)",
+        "aurapol": "<span class='wficons-madurai'> (+)",
+        "abl2": "Radial Howl (+)",
+        "abl2Info": "Let out a ferocious howl that stuns nearby enemies and causes Sentients to shed any built up resistances."
+    }
+]

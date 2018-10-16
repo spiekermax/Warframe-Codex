@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Adarza",
+        "img": "assets/companions/pets/kavats/Adarza Kavat.png",
+        "health": "40 (240 at rank 30)",
+        "shield": "70 (210 at rank 30)",
+        "armor": "50",
+        "power": "100",
+        "damage": "80.0 Slash",
+        "crit": "20%",
+        "critdmg": "2.0x",
+        "status": "7.5%",
+        "polarities": "<span class='wficons-penjaga'></span><span class='wficons-penjaga'></span>"
+    },
+    {
+        "name": "Smeeta",
+        "img": "assets/companions/pets/kavats/Smeeta Kavat.png",
+        "health": "50 (300 at rank 30)",
+        "shield": "60 (180 at rank 30)",
+        "armor": "50",
+        "power": "100",
+        "damage": "80.0 Slash",
+        "crit": "20%",
+        "critdmg": "2.0x",
+        "status": "7.5%",
+        "polarities": "<span class='wficons-penjaga'></span><span class='wficons-penjaga'></span>"
+    }
+]

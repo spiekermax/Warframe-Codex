@@ -1,0 +1,12 @@
+page-wiki {
+    
+    .page-content {
+        background-color: map-get($colors, primary);
+        color: white;
+
+        .content-section {
+            display: inline;
+        }
+    }
+
+}
