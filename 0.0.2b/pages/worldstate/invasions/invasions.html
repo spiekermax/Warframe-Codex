@@ -1,0 +1,43 @@
+<ion-header>
+    
+    <ion-navbar>
+
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+      
+        <ion-title>Invasions</ion-title>
+      
+    </ion-navbar>
+
+    <ion-item no-lines class="page-header-platformselect">
+        <ion-label>Platform</ion-label>
+        <ion-select [(ngModel)]="this.userPlatform" (ionChange)="appState.setUserPlatform(this.userPlatform)">
+            <ion-option value="pc">PC</ion-option>
+            <ion-option value="xb1">XB1</ion-option>
+            <ion-option value="ps4">PS4</ion-option>
+            <ion-option value="swi">SWITCH</ion-option>
+        </ion-select>
+    </ion-item>
+
+</ion-header>
+
+<ion-content class="page-content">
+
+    <ion-refresher (ionRefresh)="this.refreshAlerts($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="crescent"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+
+    <div [ngSwitch]="this.userPlatform">
+        <invasion-state *ngSwitchCase="'pc'" #invasionsPC [invasionSource]="'https://api.warframestat.us/pc/invasions'"></invasion-state>
+        <invasion-state *ngSwitchCase="'xb1'" #invasionsXB1 [invasionSource]="'https://api.warframestat.us/xb1/invasions'"></invasion-state>
+        <invasion-state *ngSwitchCase="'ps4'" #invasionsPS4 [invasionSource]="'https://api.warframestat.us/ps4/invasions'"></invasion-state>
+        <invasion-state *ngSwitchCase="'swi'" #invasionsSWI [invasionSource]="'https://api.warframestat.us/swi/invasions'"></invasion-state>
+    </div>
+
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{this.petObject.name}}</ion-title>
+        <ion-buttons right>
+            <ion-checkbox [(ngModel)]="this.owned" (ionChange)="this.onOwnedClicked()"></ion-checkbox>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+    <div class="content-header">
+        <img src={{this.petObject.img}}>
+    </div>
+
+    <div *ngIf="this.petObject.description != undefined" class="content-description">
+        {{this.petObject.description}}
+    </div>
+
+    <div class="content-section">
+        <h4>Stats</h4>
+
+        <!-- Health -->
+        <p *ngIf="this.petObject.health != undefined"><b>Health: </b>{{this.petObject.health[0]}} ({{this.petObject.health[1]}} at rank 30)</p>
+
+        <!-- Shield -->
+        <p *ngIf="this.petObject.shield != undefined">
+            <b>Shield: </b>
+            <ng-container *ngIf="this.unsafeIsArray(this.petObject.shield) else flatShield">
+                {{this.petObject.shield[0]}} ({{this.petObject.shield[1]}} at rank 30)
+            </ng-container>
+            <ng-template #flatShield>{{this.petObject.shield}}</ng-template>
+        </p>
+
+        <!-- Armor -->
+        <p *ngIf="this.petObject.armor != undefined"><b>Armor: </b>{{this.petObject.armor}}</p>
+
+        <!-- Polarities -->
+        <p *ngIf="this.petObject.polarities != undefined">
+            <b>Polarities: </b>
+            <span *ngFor="let polarity of this.petObject.polarities" [class]="'wficons-' + polarity"></span>
+        </p>
+        
+    </div>
+
+    <hr class="content-seperator">
+
+    <div class="content-section">
+        <h4>Attacks</h4>
+        <p *ngIf="this.petObject.damage != undefined"><b>Total Damage: </b>{{this.petObject.damage}}</p>
+        <p *ngIf="this.petObject.critChance != undefined"><b>Crit Chance: </b>{{this.petObject.critChance}}%</p>
+        <p *ngIf="this.petObject.critDamage != undefined"><b>Crit Multiplier: </b>{{this.petObject.critDamage}}x</p>
+        <p *ngIf="this.petObject.statusChance != undefined"><b>Status Chance: </b>{{this.petObject.statusChance}}%</p>
+    </div>
+</ion-content>

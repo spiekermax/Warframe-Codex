@@ -1,0 +1,28 @@
+invasion-state {
+
+    .component-content {
+        margin-left: 10px;
+        margin-right: 10px;
+
+        h4 {
+            color: map-get($colors, secondary);
+        }
+
+        .content-error {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            color: map-get($colors, semi-dark);
+        }
+
+        .content-rewards {
+            font-size: 14px;
+            color: map-get($colors, semi-light);
+        }
+
+        .content-seperator {
+            background-color: map-get($colors, semi-dark);
+        }
+    }
+
+};

@@ -1,0 +1,50 @@
+<ion-menu class="sidemenu" [content]="content" (ionClose)="this.onSidemenuClosed()">
+
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Warframe Codex</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="sidemenu-content">
+        <!-- World State-->
+        <button class="sidemenu-button" (click)="this.toggleSubmenu('sidemenu-submenu_worldstate')">World State</button>
+            <div id="sidemenu-submenu_worldstate" class="sidemenu-submenu" extended="false" content-height="150px">
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openPage(this.pages.invasions)">Invasions</button>
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openPage(this.pages.cetus)">Cetus</button>
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openPage(this.pages.vallis)">Orb Vallis</button>
+            </div>
+
+        <!-- Companions -->
+        <button menuClose class="sidemenu-button" (click)="this.openWikiPage('Companions', [1])">Companions</button>
+
+        <!-- Warframes -->
+        <button menuClose class="sidemenu-button" (click)="this.openWikiPage('Warframes', [0])">Warframes</button>
+
+        <!-- Weapons -->
+        <button class="sidemenu-button" (click)="this.toggleSubmenu('sidemenu-submenu_weapons')">Weapons</button>
+            <div id="sidemenu-submenu_weapons" class="sidemenu-submenu" extended="false" content-height="150px">
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Weapons', [2])">Primary</button>
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Weapons', [3])">Secondary</button>
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Weapons', [4])">Melee</button>
+            </div>
+
+        <!-- Mods -->
+        <button class="sidemenu-button" (click)="this.toggleSubmenu('sidemenu-submenu_mods')">Mods</button>
+            <div id="sidemenu-submenu_mods" class="sidemenu-submenu" extended="false" content-height="200px">
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Mods', [5])">Archwing</button>
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Mods', [6])">Companion</button>
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Mods', [7])">Warframe</button>
+                <button menuClose class="sidemenu-submenu-button" (click)="this.openWikiPage('Mods', [8])">Weapon</button>
+            </div>
+        
+        <!-- Prime -->
+        <button menuClose class="sidemenu-button" (click)="this.openWikiPage('Prime', [0, 1, 2, 3, 4, 5, 6, 7, 8], this.primeItemMask)">Prime</button>
+
+        <!-- Giveaways -->
+        <button class="sidemenu-button" (click)="this.showGiveawayAlert()">Giveaways</button>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav #content [root]="this.pages.wiki" swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,86 @@
+cycle-state {
+
+    .component-content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        h1 {
+            z-index: 1;
+            margin: 0;
+            padding: 20px 10px;
+            text-align: center;
+            background-color: map-get($colors, primary);
+            color: map-get($colors, secondary);
+            font-family: "Open Sans";
+        }
+
+        .content-error {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            color: map-get($colors, semi-dark);
+        }
+
+        .content-container {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+
+            .container-head {
+                width: 100%;
+                min-height: 150px;
+                height: 50%;
+                
+                .head-bgblur {
+                    z-index: 0;
+                    position: absolute;
+                    top: 0; bottom: 0;
+                    width: 100%;
+                    min-height: 150px;
+                    height: 50%;
+                    background-size: 100% auto;
+                    filter: blur(5px);
+                }
+                
+                img {
+                    z-index: 1;
+                    display: block;
+                    position: relative;
+                    height: 100%;
+                    top: 0; bottom: 0;
+                    left: 0; right: 0;
+                    margin: auto;
+                    object-fit: cover;
+                }
+            }
+            
+            .container-timer {
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -30px;
+                font-family: "Open Sans";
+                height: 50%;
+                min-height: 200px;
+
+                .timer-digit {
+                    font-size: 40px;
+                    color: map-get($colors, semi-light);
+                }
+            
+                .timer-unit {
+                    margin-top: 15px;
+                    font-size: 20px;
+                    color: map-get($colors, semi-dark);
+                }
+            }
+
+        }
+
+    }
+
+};

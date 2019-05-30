@@ -1,0 +1,183 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{this.warframeObject.name}}</ion-title>
+        <ion-buttons right>
+            <ion-checkbox [(ngModel)]="this.owned" (ionChange)="this.onOwnedClicked()"></ion-checkbox>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+
+    <!-- Header -->
+    <div class="content-header">
+
+        <!-- Image -->
+        <div class="header-portrait"><img src={{this.warframeObject.img}}></div>
+        
+        <!-- Codex Quote -->
+        <div class="header-quote">
+            <p *ngIf="this.isDeltaArray(this.warframeObject.description) else nonDeltaDescription">
+                <i>{{this.warframeObject.description[0]}}</i>
+            </p>
+            <ng-template #nonDeltaDescription>
+                <p><i>{{this.warframeObject.description}}</i></p>
+            </ng-template>
+        </div>
+
+    </div>
+
+    <hr class="content-seperator">
+
+    <div class="content-section">
+        <h4>Stats</h4>
+
+        <!-- Mastery Rank -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.mastery) else nonDeltaMastery">
+            <span [ngSwitch]="this.warframeObject.mastery[this.warframeObject.mastery.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Mastery Rank: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Mastery Rank: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.warframeObject.mastery[0]}}
+        </p>
+        <ng-template #nonDeltaMastery>
+            <p *ngIf="this.warframeObject.mastery != undefined"><b>Mastery Rank: </b>{{this.warframeObject.mastery}}</p>
+        </ng-template>
+
+        <!-- Health -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.health) else nonDeltaHealth">
+            <span [ngSwitch]="this.warframeObject.health[this.warframeObject.health.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Health: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Health: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.warframeObject.health[0][0]}} ({{this.warframeObject.health[0][1]}} at rank 30)
+        </p>
+        <ng-template #nonDeltaHealth>
+            <p *ngIf="this.warframeObject.health != undefined"><b>Health: </b>{{this.warframeObject.health[0]}} ({{this.warframeObject.health[1]}} at rank 30)</p>
+        </ng-template>
+
+        <!-- Shield -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.shield) else nonDeltaShield">
+            <span [ngSwitch]="this.warframeObject.shield[this.warframeObject.shield.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Shield: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Shield: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.warframeObject.shield[0][0]}} ({{this.warframeObject.shield[0][1]}} at rank 30)
+        </p>
+        <ng-template #nonDeltaShield>
+            <p *ngIf="this.warframeObject.shield != undefined"><b>Shield: </b>{{this.warframeObject.shield[0]}} ({{this.warframeObject.shield[1]}} at rank 30)</p>
+        </ng-template>
+
+        <!-- Armor -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.armor) else nonDeltaArmor">
+            <span [ngSwitch]="this.warframeObject.armor[this.warframeObject.armor.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Armor: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Armor: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.warframeObject.armor[0]}}
+        </p>
+        <ng-template #nonDeltaArmor>
+            <p *ngIf="this.warframeObject.armor != undefined"><b>Armor: </b>{{this.warframeObject.armor}}</p>
+        </ng-template>
+
+        <!-- Energy -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.energy) else nonDeltaEnergy">
+            <span [ngSwitch]="this.warframeObject.energy[this.warframeObject.energy.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Energy: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Energy: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.warframeObject.energy[0][0]}} ({{this.warframeObject.energy[0][1]}} at rank 30)
+        </p>
+        <ng-template #nonDeltaEnergy>
+            <p *ngIf="this.warframeObject.energy != undefined"><b>Energy: </b>{{this.warframeObject.energy[0]}} ({{this.warframeObject.energy[1]}} at rank 30)</p>
+        </ng-template>
+
+        <!-- Speed -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.speed) else nonDeltaSpeed">
+            <span [ngSwitch]="this.warframeObject.speed[this.warframeObject.speed.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Speed: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Speed: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.warframeObject.speed[0]}}
+        </p>
+        <ng-template #nonDeltaSpeed>
+            <p *ngIf="this.warframeObject.speed != undefined"><b>Speed: </b>{{this.warframeObject.speed}}</p>
+        </ng-template>
+
+        <!-- Polarities -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.polarities) else nonDeltaPolarities">
+            <span [ngSwitch]="this.warframeObject.polarities[this.warframeObject.polarities.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Polarities: </b>
+                <b *ngSwitchCase="'m'" style="color:yellow">Polarities: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Polarities: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            <span *ngFor="let polarity of this.warframeObject.polarities[0]" [class]="'wficons-' + polarity"></span>
+        </p>
+        <ng-template #nonDeltaPolarities>
+            <p *ngIf="this.warframeObject.polarities != undefined"><b>Polarities: </b><span *ngFor="let polarity of this.warframeObject.polarities" [class]="'wficons-' + polarity"></span></p>
+        </ng-template>
+
+        <!-- Aura Polarity -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.auraPolarity) else nonDeltaAura">
+            <span [ngSwitch]="this.warframeObject.auraPolarity[this.warframeObject.auraPolarity.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Aura Polarity: </b>
+                <b *ngSwitchCase="'m'" style="color:yellow">Aura Polarity: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            <span [class]="'wficons-' +  this.warframeObject.auraPolarity[0]"></span>
+        </p>
+        <ng-template #nonDeltaAura>
+            <p>
+                <b>Aura Poloraity: </b>
+                <span *ngIf="(this.warframeObject.auraPolarity != undefined) else noAuraPolarity" [class]="'wficons-' +  this.warframeObject.auraPolarity"></span>
+                <ng-template #noAuraPolarity>None</ng-template>
+            </p>
+        </ng-template>
+
+    </div>
+
+    <hr class="content-seperator">
+
+    <div class="content-section">
+        <h4>Abilities</h4>
+
+        <!-- Abilities -->
+        <ng-container *ngFor="let abilityObject of this.warframeObject.abilities">
+            <!-- Ability -->
+            <p *ngIf="this.isDeltaArray(abilityObject) else nonDeltaAbility">
+              <span [ngSwitch]="abilityObject[abilityObject.length - 1]">
+                    <b *ngSwitchCase="'m'" style="color:yellow">{{abilityObject[0].name}} </b>
+                    <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+              </span>
+              - {{abilityObject[0].description}}
+            </p>
+            <ng-template #nonDeltaAbility>
+                <p *ngIf="abilityObject != undefined"><b>{{abilityObject.name}}</b> - {{abilityObject.description}}</p>
+            </ng-template>
+        </ng-container>
+
+        <!-- Passive -->
+        <p *ngIf="this.isDeltaArray(this.warframeObject.passive) else nonDeltaPassive">
+            <span [ngSwitch]="this.warframeObject.passive[this.warframeObject.passive.length - 1]">
+              <b *ngSwitchCase="'m'" style="color:yellow">Passive </b>
+              <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            - {{this.warframeObject.passive[0]}}
+        </p>
+        <ng-template #nonDeltaPassive>
+            <p *ngIf="this.warframeObject.passive != undefined"><b>Passive </b>- {{this.warframeObject.passive}}</p>
+        </ng-template>
+
+    </div>
+    
+</ion-content>

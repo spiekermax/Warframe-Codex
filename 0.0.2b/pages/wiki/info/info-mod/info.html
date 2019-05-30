@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{this.modObject.name}}</ion-title>
+        <ion-buttons right>
+            <ion-checkbox [(ngModel)]="this.owned" (ionChange)="this.onOwnedClicked()"></ion-checkbox>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+    <div class="content-header">
+        <img src={{this.modObject.img}}>
+    </div>
+
+    <div class="content-description" *ngIf="this.modObject.isNonSentinel">
+        Can't be equipped on Sentinels
+    </div>
+
+    <div class="content-section" *ngIf="this.modObject.missionDrops || this.modObject.enemyDrops || this.modObject.questDrops else noDropInfo">
+        <h4>Acquisition</h4>
+
+        <!-- Missions -->
+        <ng-container *ngIf="this.modObject.missionDrops">
+            <p><b>Missions: </b></p>
+            <p *ngFor="let mission of this.modObject.missionDrops"> - {{mission.location}}<ng-container *ngIf="mission.rotation"> (Rot {{mission.rotation}})</ng-container> {{mission.chance}}%</p>
+        </ng-container>
+
+        <!-- Enemies -->
+        <ng-container *ngIf="this.modObject.enemyDrops">
+            <p><b>Enemies: </b></p>
+            <p *ngFor="let enemy of this.modObject.enemyDrops"> - {{enemy.location}} {{enemy.chance}}%</p>
+        </ng-container>
+
+        <!-- Quests -->
+        <ng-container *ngIf="this.modObject.questDrops">
+            <p><b>Quests: </b></p>
+            <p *ngFor="let quest of this.modObject.questDrops"> - {{quest.location}} {{quest.chance}}%</p>
+        </ng-container>
+    </div>
+    <ng-template #noDropInfo>
+        <div style="margin: 10px">More acquisition info coming in the future.</div>
+    </ng-template>
+ 
+</ion-content>

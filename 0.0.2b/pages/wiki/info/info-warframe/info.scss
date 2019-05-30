@@ -1,0 +1,52 @@
+page-warframes-info {
+
+    .page-content {
+        background-color: map-get($colors, primary);
+        color: white;
+        font-family: "Open Sans";
+    }
+
+    .content-header {
+        display: table;
+        border-spacing: 5px;
+        margin-bottom: -5px;
+
+
+        .header-portrait {
+            display: table-cell;
+            width:111px;
+            vertical-align: middle;
+            margin: 0 5px;
+            padding: 5px 0;
+
+            img {
+                width:106px;
+                height:106px;
+                border: 3px solid map-get($colors, secondary);
+                border-radius: 50%;
+            }
+        }
+
+        .header-quote {
+            display: table-cell;
+            width: calc(100% - 106px);
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    .content-seperator {
+        background-color: #505050;
+        margin: 10px;
+    }
+
+    .content-section {
+        clear: both;
+        margin-left: 10px;
+
+        h4 {
+            color: map-get($colors , secondary);
+        }
+    }
+
+};

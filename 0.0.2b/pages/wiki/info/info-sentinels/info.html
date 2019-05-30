@@ -1,0 +1,210 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{this.sentinelObject.name}}</ion-title>
+        <ion-buttons right>
+            <ion-checkbox [(ngModel)]="this.owned" (ionChange)="this.onOwnedClicked()"></ion-checkbox>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+    <div class="content-header">
+        <img src={{this.sentinelObject.img}}>
+    </div>
+
+    <div *ngIf="this.sentinelObject.description != undefined" class="content-description">
+        {{this.sentinelObject.description}}
+    </div>
+
+    <div class="content-section">
+        <h4>Stats</h4>
+
+        <!-- Health -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.health) else nonDeltaHealth">
+            <span [ngSwitch]="this.sentinelObject.health[this.sentinelObject.health.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Health: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Health: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.health[0]}}
+        </p>
+        <ng-template #nonDeltaHealth>
+            <p *ngIf="this.sentinelObject.health != undefined"><b>Health: </b>{{this.sentinelObject.health}}</p>
+        </ng-template>
+
+        <!-- Shield -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.shield) else nonDeltaShield">
+            <span [ngSwitch]="this.sentinelObject.shield[this.sentinelObject.shield.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Shield: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Shield: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.shield[0]}}
+        </p>
+        <ng-template #nonDeltaShield>
+            <p *ngIf="this.sentinelObject.shield != undefined"><b>Shield: </b>{{this.sentinelObject.shield}}</p>
+        </ng-template>
+
+        <!-- Armor -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.armor) else nonDeltaArmor">
+            <span [ngSwitch]="this.sentinelObject.armor[this.sentinelObject.armor.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Armor: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Armor: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.armor[0]}}
+        </p>
+        <ng-template #nonDeltaArmor>
+            <p *ngIf="this.sentinelObject.armor != undefined"><b>Armor: </b>{{this.sentinelObject.armor}}</p>
+        </ng-template>
+
+        <!-- Polarities -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.polarities) else nonDeltaPolarities">
+            <span [ngSwitch]="this.sentinelObject.polarities[this.sentinelObject.polarities.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Polarities: </b>
+                <b *ngSwitchCase="'m'" style="color:yellow">Polarities: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Polarities: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            <span *ngFor="let polarity of this.sentinelObject.polarities[0]" [class]="'wficons-' + polarity"></span>
+        </p>
+        <ng-template #nonDeltaPolarities>
+            <p *ngIf="this.sentinelObject.polarities != undefined"><b>Polarities: </b><span *ngFor="let polarity of this.sentinelObject.polarities" [class]="'wficons-' + polarity"></span></p>
+        </ng-template>
+
+    </div>
+
+    <hr class="content-seperator">
+
+    <div class="content-section">
+        <h4>{{this.sentinelObject.weapon.name}} (Weapon)</h4>
+
+        <!-- Noiselevel -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.noiselevel) else nonDeltaNoiselevel">
+            <span [ngSwitch]="this.sentinelObject.weapon.noiselevel[this.sentinelObject.weapon.noiselevel.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Noise Level: </b>
+                <b *ngSwitchCase="'m'" style="color:yellow">Noise Level: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Noise Level: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            <ng-container *ngIf="this.sentinelObject.weapon.noiselevel[0] != undefined else defaultNoiselevel">{{this.sentinelObject.weapon.noiselevel[0]}}</ng-container>
+            <ng-template #defaultNoiselevel>Alarming</ng-template>
+        </p>
+        <ng-template #nonDeltaNoiselevel>
+            <p>
+                <b>Noise Level: </b>
+                <ng-container *ngIf="this.sentinelObject.weapon.noiselevel != undefined else defaultNoiselevel">{{this.sentinelObject.weapon.noiselevel}}</ng-container>
+                <ng-template #defaultNoiselevel>Alarming</ng-template>
+            </p>
+        </ng-template>
+
+        <!-- Fire Rate -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.fireRate) else nonDeltaAttackFireRate">
+            <span [ngSwitch]="this.sentinelObject.weapon.fireRate[this.sentinelObject.weapon.fireRate.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Fire Rate: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Fire Rate: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.weapon.fireRate[0]}} rounds per sec
+        </p>
+        <ng-template #nonDeltaAttackFireRate>
+            <p *ngIf="this.sentinelObject.weapon.fireRate != undefined"><b>Fire Rate: </b>{{this.sentinelObject.weapon.fireRate}} rounds per sec</p>
+        </ng-template>
+
+        <!-- Accuracy -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.accuracy) else nonDeltaAccuracy">
+            <span [ngSwitch]="this.sentinelObject.weapon.accuracy[this.sentinelObject.weapon.accuracy.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Accuracy: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Accuracy: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.weapon.accuracy[0]}}
+        </p>
+        <ng-template #nonDeltaAccuracy>
+            <p *ngIf="this.sentinelObject.weapon.accuracy != undefined"><b>Accuracy: </b>{{this.sentinelObject.weapon.accuracy}}</p>
+        </ng-template>
+
+        <!-- Magazine Size -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.magSize) else nonDeltaMagSize">
+            <span [ngSwitch]="this.sentinelObject.weapon.magSize[this.sentinelObject.weapon.magSize.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Magazine Size: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Magazine Size: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.weapon.magSize[0]}} rounds per mag
+        </p>
+        <ng-template #nonDeltaMagSize>
+            <p *ngIf="this.sentinelObject.weapon.magSize != undefined"><b>Magazine Size: </b>{{this.sentinelObject.weapon.magSize}} rounds per mag</p>
+        </ng-template>
+
+        <!-- Reload Speed -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.reloadSpeed) else nonDeltaReloadSpeed">
+            <span [ngSwitch]="this.sentinelObject.weapon.reloadSpeed[this.sentinelObject.weapon.reloadSpeed.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Reload Time: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Reload Time: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.weapon.reloadSpeed[0]}}s
+        </p>
+        <ng-template #nonDeltaReloadSpeed>
+            <p *ngIf="this.sentinelObject.weapon.reloadSpeed != undefined"><b>Reload Time: </b>{{this.sentinelObject.weapon.reloadSpeed}}s</p>
+        </ng-template>
+
+        <!-- Damage -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.damage) else nonDeltaDamage">
+            <span [ngSwitch]="this.sentinelObject.weapon.damage[this.sentinelObject.weapon.damage.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Damage: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Damage: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.weapon.damage[0]}}
+        </p>
+        <ng-template #nonDeltaDamage>
+            <p *ngIf="this.sentinelObject.weapon.damage != undefined"><b>Damage: </b>{{this.sentinelObject.weapon.damage}}</p>
+        </ng-template>
+
+        <!-- Crit Chance -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.critChance) else nonDeltaAttackCritChance">
+            <span [ngSwitch]="this.sentinelObject.weapon.critChance[this.sentinelObject.weapon.critChance.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Crit Chance: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Crit Chance: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.weapon.critChance[0]}}%
+        </p>
+        <ng-template #nonDeltaAttackCritChance>
+            <p *ngIf="this.sentinelObject.weapon.critChance != undefined"><b>Crit Chance: </b>{{this.sentinelObject.weapon.critChance}}%</p>
+        </ng-template>
+
+        <!-- Crit Damage -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.critDamage) else nonDeltaAttackCritDamage">
+            <span [ngSwitch]="this.sentinelObject.weapon.critDamage[this.sentinelObject.weapon.critDamage.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Crit Multiplier: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Crit Multiplier: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.weapon.critDamage[0]}}x
+        </p>
+        <ng-template #nonDeltaAttackCritDamage>
+            <p *ngIf="this.sentinelObject.weapon.critDamage != undefined"><b>Crit Multiplier: </b>{{this.sentinelObject.weapon.critDamage}}x</p>
+        </ng-template>
+
+        <!-- Status Chance -->
+        <p *ngIf="this.isDeltaArray(this.sentinelObject.weapon.statusChance) else nonDeltaAttackStatusChance">
+            <span [ngSwitch]="this.sentinelObject.weapon.statusChance[this.sentinelObject.weapon.statusChance.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Status Chance: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Status Chance: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.sentinelObject.weapon.statusChance[0]}}%
+        </p>
+        <ng-template #nonDeltaAttackStatusChance>
+            <p *ngIf="this.sentinelObject.weapon.statusChance != undefined"><b>Status Chance: </b>{{this.sentinelObject.weapon.statusChance}}%</p>
+        </ng-template>
+        
+    </div>
+
+</ion-content>

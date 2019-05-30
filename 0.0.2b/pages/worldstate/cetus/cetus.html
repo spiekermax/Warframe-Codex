@@ -1,0 +1,65 @@
+<ion-header>
+
+    <ion-navbar>
+
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+      
+        <ion-title>Cetus</ion-title>
+
+    </ion-navbar>
+
+    <ion-item no-lines class="page-header-platformselect">
+        <ion-label>Platform</ion-label>
+        <ion-select [(ngModel)]="this.userPlatform" (ionChange)="appState.setUserPlatform(this.userPlatform)">
+            <ion-option value="pc">PC</ion-option>
+            <ion-option value="xb1">XB1</ion-option>
+            <ion-option value="ps4">PS4</ion-option>
+            <ion-option value="swi">SWITCH</ion-option>
+        </ion-select>
+    </ion-item>
+    
+</ion-header>
+
+<ion-content class="page-content">
+
+    <div [ngSwitch]="this.userPlatform">
+        <cycle-state *ngSwitchCase="'pc'"
+          [cycleStateSource]="'https://api.warframestat.us/pc/cetusCycle'"
+          [cycleStateDeterminer]="'isDay'"
+          [cycleStateNameTrue]="'Day'"
+          [cycleStateNameFalse]="'Night'"
+          [cycleStateImageTrue]="'cetus-day.webp'"
+          [cycleStateImageFalse]="'cetus-night.webp'">
+        </cycle-state>
+      
+        <cycle-state *ngSwitchCase="'xb1'"
+          [cycleStateSource]="'https://api.warframestat.us/xb1/cetusCycle'"
+          [cycleStateDeterminer]="'isDay'"
+          [cycleStateNameTrue]="'Day'"
+          [cycleStateNameFalse]="'Night'"
+          [cycleStateImageTrue]="'cetus-day.webp'"
+          [cycleStateImageFalse]="'cetus-night.webp'">
+        </cycle-state>
+      
+        <cycle-state *ngSwitchCase="'ps4'"
+          [cycleStateSource]="'https://api.warframestat.us/ps4/cetusCycle'"
+          [cycleStateDeterminer]="'isDay'"
+          [cycleStateNameTrue]="'Day'"
+          [cycleStateNameFalse]="'Night'"
+          [cycleStateImageTrue]="'cetus-day.webp'"
+          [cycleStateImageFalse]="'cetus-night.webp'">
+        </cycle-state>
+      
+        <cycle-state *ngSwitchCase="'swi'"
+          [cycleStateSource]="'https://api.warframestat.us/swi/cetusCycle'"
+          [cycleStateDeterminer]="'isDay'"
+          [cycleStateNameTrue]="'Day'"
+          [cycleStateNameFalse]="'Night'"
+          [cycleStateImageTrue]="'cetus-day.webp'"
+          [cycleStateImageFalse]="'cetus-night.webp'">
+        </cycle-state>
+    </div>
+  
+</ion-content>

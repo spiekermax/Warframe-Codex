@@ -1,0 +1,472 @@
+<ion-header>
+
+    <!-- Display mode: Wiki -->
+    <ion-navbar *ngIf="this.displayMode == 0" [@fadeAnimation] [@.disabled]="!this.animationsEnabled">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{appState.wikiState.title}}</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="this.openSearchbar($event)">
+                <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+    <!-- Display mode: Search -->
+    <ion-navbar *ngIf="this.displayMode == 1" [@fadeAnimation] [@.disabled]="!this.animationsEnabled">
+        <ion-buttons left>
+            <button ion-button icon-only style="padding: 0 6px" (click)="this.onWikiBackButtonAction($event)">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-searchbar #searchbar (ionFocus)="this.content.scrollToTop()" (ionInput)="this.updateItemFilter($event)"></ion-searchbar>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="this.openFilterTool($event)">
+                <ion-icon><span class="wficons-filter"></span></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+  
+<ion-content class="page-content">
+
+    <!-- Warframes -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(0) || this.preloadChunksEnabled >= 0" [hidden]="!appState.getWikiActiveSections().includes(0)">
+        <itemgrid-framed 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Normal' : 'Warframes: Normal'"
+          [itemSource]="'assets/data/warframes/warframes-normal.json'"
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Prime' : 'Warframes: Prime',
+            appState.getWikiActiveSections().length == 1 ? 'Umbra' : 'Warframes: Umbra'
+          ]"
+          [itemExtensions]="[
+            'assets/data/warframes/warframes-prime.json',
+            'assets/data/warframes/warframes-umbra.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()"
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openWarframeInfo($event)">
+        </itemgrid-framed>
+    </div>
+
+    <!-- Companions -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(1) || this.preloadChunksEnabled >= 1" [hidden]="!appState.getWikiActiveSections().includes(1)">
+        
+        <!-- Kavats -->
+        <itemgrid-dark
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Kavats' : 'Companions: Kavats'"
+          [itemSource]="'assets/data/companions/companions-pets-kavats.json'"
+          [itemMask]="appState.getWikiItemMask()"
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openPetInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Kubrows -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Kubrows' : 'Companions: Kubrows'"
+          [itemSource]="'assets/data/companions/companions-pets-kubrows.json'"
+          [itemMask]="appState.getWikiItemMask()"
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openPetInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Sentinels -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Sentinels' : 'Companions: Sentinels'" 
+          [itemSource]="'assets/data/companions/companions-sentinels-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Sentinels Prime' : 'Companions: Sentinels Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/companions/companions-sentinels-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openSentinelInfo($event)">
+        </itemgrid-dark>
+
+    </div>
+
+    <!-- Primary Weapons -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(2) || this.preloadChunksEnabled >= 2" [hidden]="!appState.getWikiActiveSections().includes(2)">
+        
+        <!-- Bows -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Bows' : 'Weapons: Bows'" 
+          [itemSource]="'assets/data/weapons/weapons-primary-bows-normal.json'"
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Bows Prime' : 'Weapons: Bows Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-primary-bows-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openGunInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Launchers -->
+        <itemgrid-dark
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Launchers' : 'Weapons: Launchers'" 
+          [itemSource]="'assets/data/weapons/weapons-primary-launchers-normal.json'"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openGunInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Rifles -->
+        <itemgrid-dark
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Rifles' : 'Weapons: Rifles'" 
+          [itemSource]="'assets/data/weapons/weapons-primary-rifles-normal.json'"
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Rifles Prime' : 'Weapons: Rifles Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-primary-rifles-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openGunInfo($event)">
+        </itemgrid-dark>
+        
+        <!-- Shotguns -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Shotguns' : 'Weapons: Shotguns'" 
+          [itemSource]="'assets/data/weapons/weapons-primary-shotguns-normal.json'"
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Shotguns Prime' : 'Weapons: Shotguns Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-primary-shotguns-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openGunInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Snipers -->
+        <itemgrid-dark
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Snipers' : 'Weapons: Snipers'" 
+          [itemSource]="'assets/data/weapons/weapons-primary-snipers-normal.json'"
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Snipers Prime' : 'Weapons: Snipers Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-primary-snipers-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openGunInfo($event)">
+        </itemgrid-dark>
+
+    </div>
+
+    <!-- Secondary Weapons -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(3) || this.preloadChunksEnabled >= 3" [hidden]="!appState.getWikiActiveSections().includes(3)">
+        
+        <!-- Single -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Single' : 'Weapons: Single'" 
+          [itemSource]="'assets/data/weapons/weapons-secondary-single-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Single Prime' : 'Weapons: Single Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-secondary-single-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openGunInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Dual -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Dual' : 'Weapons: Dual'" 
+          [itemSource]="'assets/data/weapons/weapons-secondary-dual-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Dual Prime' : 'Weapons: Dual Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-secondary-dual-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openGunInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Thrown -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Thrown' : 'Weapons: Thrown'" 
+          [itemSource]="'assets/data/weapons/weapons-secondary-thrown-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Thrown Prime' : 'Weapons: Thrown Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-secondary-thrown-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openGunInfo($event)">
+        </itemgrid-dark>
+
+    </div>
+
+    <!-- Melee Weapons -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(4) || this.preloadChunksEnabled >= 4" [hidden]="!appState.getWikiActiveSections().includes(4)">
+        
+        <!-- Brawlers -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Brawlers' : 'Weapons: Brawlers'" 
+          [itemSource]="'assets/data/weapons/weapons-melee-brawlers-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Brawlers Prime' : 'Weapons: Brawlers Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-melee-brawlers-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openMeleeInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Daggers -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Daggers' : 'Weapons: Daggers'" 
+          [itemSource]="'assets/data/weapons/weapons-melee-daggers-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Daggers Prime' : 'Weapons: Daggers Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-melee-daggers-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openMeleeInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Heavy -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Heavy' : 'Weapons: Heavy'" 
+          [itemSource]="'assets/data/weapons/weapons-melee-heavy-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Heavy Prime' : 'Weapons: Heavy Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-melee-heavy-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openMeleeInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Misc -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Misc' : 'Weapons: Misc'" 
+          [itemSource]="'assets/data/weapons/weapons-melee-misc-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Misc Prime' : 'Weapons: Misc Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-melee-misc-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openMeleeInfo($event)">
+        </itemgrid-dark>
+
+        <!-- Poles -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Poles' : 'Weapons: Poles'" 
+          [itemSource]="'assets/data/weapons/weapons-melee-poles-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Poles Prime' : 'Weapons: Poles Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-melee-poles-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openMeleeInfo($event)">
+        </itemgrid-dark>
+        
+        <!-- Swords -->
+        <itemgrid-dark 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Swords' : 'Weapons: Swords'" 
+          [itemSource]="'assets/data/weapons/weapons-melee-swords-normal.json'" 
+          [extensionTitles]="[
+            appState.getWikiActiveSections().length == 1 ? 'Swords Prime' : 'Weapons: Swords Prime'
+          ]"
+          [itemExtensions]="[
+            'assets/data/weapons/weapons-melee-swords-prime.json'
+          ]"
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()" 
+          (itemClick)="this.openMeleeInfo($event)">
+        </itemgrid-dark>
+
+    </div>
+
+    <!-- Archwing Mods -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(5) || this.preloadChunksEnabled >= 5" [hidden]="!appState.getWikiActiveSections().includes(5)">
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Archwing' : 'Mods: Archwing'" 
+          [itemSource]="'assets/data/mods/mods-archwing.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+    </div>
+
+    <!-- Companion Mods -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(6) || this.preloadChunksEnabled >= 6" [hidden]="!appState.getWikiActiveSections().includes(6)">
+        
+        <!-- Companion -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Companion' : 'Mods: Companion'" 
+          [itemSource]="'assets/data/mods/mods-companion.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Beast -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Beast' : 'Mods: Beast'" 
+          [itemSource]="'assets/data/mods/mods-beast.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Kavat -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Kavat' : 'Mods: Kavat'" 
+          [itemSource]="'assets/data/mods/mods-kavat.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Kubrow -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Kubrow' : 'Mods: Kubrow'" 
+          [itemSource]="'assets/data/mods/mods-kubrow.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Sentinel -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Sentinel' : 'Mods: Sentinel'" 
+          [itemSource]="'assets/data/mods/mods-sentinel.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+    </div>
+
+    <!-- Warframe Mods -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(7) || this.preloadChunksEnabled >= 7" [hidden]="!appState.getWikiActiveSections().includes(7)">
+        
+        <!-- Aura -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Aura' : 'Mods: Aura'" 
+          [itemSource]="'assets/data/mods/mods-aura.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Warframe -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Warframe' : 'Mods: Warframe'" 
+          [itemSource]="'assets/data/mods/mods-warframe.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Augment -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Augment' : 'Mods: Augment'" 
+          [itemSource]="'assets/data/mods/mods-augment.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+    </div>
+
+    <!-- Weapon Mods -->
+    <div class="content-section" *ngIf="appState.getWikiActiveSections().includes(8) || this.preloadChunksEnabled >= 8" [hidden]="!appState.getWikiActiveSections().includes(8)">
+
+        <!-- Bow -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Bow' : 'Mods: Bow'" 
+          [itemSource]="'assets/data/mods/mods-bow.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Melee -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Melee' : 'Mods: Melee'" 
+          [itemSource]="'assets/data/mods/mods-melee.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Pistol -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Pistol' : 'Mods: Pistol'" 
+          [itemSource]="'assets/data/mods/mods-pistol.json'" 
+          [itemMask]="appState.getWikiItemMask()"
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Rifle -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Rifle' : 'Mods: Rifle'" 
+          [itemSource]="'assets/data/mods/mods-rifle.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Shotgun -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Shotgun' : 'Mods: Shotgun'" 
+          [itemSource]="'assets/data/mods/mods-shotgun.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Sniper -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Sniper' : 'Mods: Sniper'" 
+          [itemSource]="'assets/data/mods/mods-sniper.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+        <!-- Stance -->
+        <itemgrid-pure 
+          [sourceTitle]="appState.getWikiActiveSections().length == 1 ? 'Stance' : 'Mods: Stance'" 
+          [itemSource]="'assets/data/mods/mods-stance.json'" 
+          [itemMask]="appState.getWikiItemMask()" 
+          [itemFilter]="appState.getWikiItemFilter()"
+          (itemClick)="this.openModInfo($event)">
+        </itemgrid-pure>
+
+    </div>
+
+</ion-content>

@@ -1,0 +1,13 @@
+page-vallis {
+  
+    .page-header-platformselect {
+        background-color: map-get($colors, pretty-dark);
+        color: map-get($colors, semi-light);
+    }
+
+    .page-content {
+        background-color: map-get($colors, primary);
+        color: white;
+    }
+
+};

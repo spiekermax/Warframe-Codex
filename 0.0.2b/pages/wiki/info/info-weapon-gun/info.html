@@ -1,0 +1,423 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{this.weaponObject.name}}</ion-title>
+        <ion-buttons right>
+            <ion-checkbox [(ngModel)]="this.owned" (ionChange)="this.onOwnedClicked()"></ion-checkbox>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+    
+    <div class="content-header">
+      <img src={{this.weaponObject.img}}>
+    </div>
+
+    <div class="content-section">
+        <h4>Utility</h4>
+
+        <!-- Mastery -->
+        <p *ngIf="this.isDeltaArray(this.weaponObject.mastery) else nonDeltaMastery">
+            <span [ngSwitch]="this.weaponObject.mastery[this.weaponObject.mastery.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Mastery Rank: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Mastery Rank: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.weaponObject.mastery[0]}}
+        </p>
+        <ng-template #nonDeltaMastery>
+            <p *ngIf="this.weaponObject.mastery != undefined"><b>Mastery Rank: </b>{{this.weaponObject.mastery}}</p>
+        </ng-template>
+
+        <!-- Noiselevel -->
+        <p *ngIf="this.isDeltaArray(this.weaponObject.noiselevel) else nonDeltaNoiselevel">
+            <span [ngSwitch]="this.weaponObject.noiselevel[this.weaponObject.noiselevel.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Noise Level: </b>
+                <b *ngSwitchCase="'m'" style="color:yellow">Noise Level: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Noise Level: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            <ng-container *ngIf="this.weaponObject.noiselevel[0] != undefined else defaultNoiselevel">{{this.weaponObject.noiselevel[0]}}</ng-container>
+            <ng-template #defaultNoiselevel>Alarming</ng-template>
+        </p>
+        <ng-template #nonDeltaNoiselevel>
+            <p>
+                <b>Noise Level: </b>
+                <ng-container *ngIf="this.weaponObject.noiselevel != undefined else defaultNoiselevel">{{this.weaponObject.noiselevel}}</ng-container>
+                <ng-template #defaultNoiselevel>Alarming</ng-template>
+            </p>
+        </ng-template>
+
+        <!-- Trigger Type -->
+        <p *ngIf="this.isDeltaArray(this.weaponObject.triggerType) else nonDeltaTriggerType">
+            <span [ngSwitch]="this.weaponObject.triggerType[this.weaponObject.triggerType.length - 1]">
+                <b *ngSwitchCase="'m'" style="color:yellow">Trigger Type: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.weaponObject.triggerType[0]}}
+        </p>
+        <ng-template #nonDeltaTriggerType>
+            <p *ngIf="this.weaponObject.triggerType != undefined"><b>Trigger Type: </b>{{this.weaponObject.triggerType}}</p>
+        </ng-template>
+
+        <!-- Accuracy -->
+        <p *ngIf="this.isDeltaArray(this.weaponObject.accuracy) else nonDeltaAccuracy">
+            <span [ngSwitch]="this.weaponObject.accuracy[this.weaponObject.accuracy.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Accuracy: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Accuracy: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            <ng-container *ngIf="this.safeIsArray(this.weaponObject.accuracy[0]) else flatAccuracy">{{this.weaponObject.accuracy[0][0]}} ({{this.weaponObject.accuracy[0][1]}} aimed)</ng-container>
+            <ng-template #flatAccuracy>{{this.weaponObject.accuracy[0]}}</ng-template>
+        </p>
+        <ng-template #nonDeltaAccuracy>
+            <p *ngIf="this.weaponObject.accuracy != undefined">
+                <b>Accuracy: </b>
+                <ng-container *ngIf="this.unsafeIsArray(this.weaponObject.accuracy) else flatAccuracy">{{this.weaponObject.accuracy[0]}} ({{this.weaponObject.accuracy[1]}} aimed)</ng-container>
+                <ng-template #flatAccuracy>{{this.weaponObject.accuracy}}</ng-template>
+            </p>
+        </ng-template>
+
+        <!-- Magazine Size -->
+        <p *ngIf="this.isDeltaArray(this.weaponObject.magSize) else nonDeltaMagSize">
+            <span [ngSwitch]="this.weaponObject.magSize[this.weaponObject.magSize.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Magazine Size: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Magazine Size: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.weaponObject.magSize[0]}} rounds per mag
+        </p>
+        <ng-template #nonDeltaMagSize>
+            <p *ngIf="this.weaponObject.magSize != undefined"><b>Magazine Size: </b>{{this.weaponObject.magSize}} rounds per mag</p>
+        </ng-template>
+
+        <!-- Max Ammo -->
+        <p *ngIf="this.isDeltaArray(this.weaponObject.maxAmmo) else nonDeltaMaxAmmo">
+            <span [ngSwitch]="this.weaponObject.maxAmmo[this.weaponObject.maxAmmo.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Max Ammo: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Max Ammo: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.weaponObject.maxAmmo[0]}} rounds
+        </p>
+        <ng-template #nonDeltaMaxAmmo>
+            <p *ngIf="this.weaponObject.maxAmmo != undefined"><b>Max Ammo: </b>{{this.weaponObject.maxAmmo}} rounds</p>
+        </ng-template>
+
+        <!-- Reload Speed -->
+        <p *ngIf="this.isDeltaArray(this.weaponObject.reloadSpeed) else nonDeltaReloadSpeed">
+            <span [ngSwitch]="this.weaponObject.reloadSpeed[this.weaponObject.reloadSpeed.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Reload Time: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Reload Time: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{this.weaponObject.reloadSpeed[0]}}s
+        </p>
+        <ng-template #nonDeltaReloadSpeed>
+            <p *ngIf="this.weaponObject.reloadSpeed != undefined"><b>Reload Time: </b>{{this.weaponObject.reloadSpeed}}s</p>
+        </ng-template>
+
+        <!-- Polarities -->
+        <p *ngIf="this.isDeltaArray(this.weaponObject.polarities) else nonDeltaPolarities">
+            <span [ngSwitch]="this.weaponObject.polarities[this.weaponObject.polarities.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Polarities: </b>
+                <b *ngSwitchCase="'m'" style="color:yellow">Polarities: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Polarities: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            <span *ngFor="let polarity of this.weaponObject.polarities[0]" [class]="'wficons-' + polarity"></span>
+        </p>
+        <ng-template #nonDeltaPolarities>
+            <p *ngIf="this.weaponObject.polarities != undefined">
+                <b>Polarities: </b>
+                <span *ngFor="let polarity of this.weaponObject.polarities" [class]="'wficons-' + polarity"></span>
+            </p>
+        </ng-template>
+
+    </div>
+
+    <!-- Attacks -->
+    <ng-container *ngFor="let attackObject of this.weaponObject.attacks">
+        <hr class="content-seperator">
+        <div class="content-section">
+        
+        <!-- Attack Type -->
+        <ng-container *ngIf="this.isDeltaArray(attackObject.attackType) else nonDeltaAttackType">
+            <span [ngSwitch]="attackObject.attackType[attackObject.attackType.length - 1]">
+                <h4 *ngSwitchCase="'+'" style="color:green">{{attackObject.attackType[0]}} Attack</h4>
+                <h4 *ngSwitchCase="'m'" style="color:yellow">{{attackObject.attackType[0]}} Attack</h4>
+                <h4 *ngSwitchDefault>Corrupted JSON data, please contact the developer!</h4>
+            </span>
+        </ng-container>
+        <ng-template #nonDeltaAttackType>
+            <h4>{{attackObject.attackType}} Attack</h4>
+        </ng-template>
+
+        <!-- Attack Name -->
+        <ng-container *ngIf="this.isDeltaArray(attackObject.attackName) else nonDeltaAttackName">
+            <p><b>Name: </b>{{attackObject.attackName[0]}}</p>
+        </ng-container>
+        <ng-template #nonDeltaAttackName>
+            <p *ngIf="attackObject.attackName != undefined"><b>Name: </b>{{attackObject.attackName}}</p>
+        </ng-template>
+
+
+        <!-- Shot Type -->
+        <p *ngIf="this.isDeltaArray(attackObject.shotType) else nonDeltaAttackShotType">
+            <span [ngSwitch]="attackObject.shotType[attackObject.shotType.length - 1]">
+                <b *ngSwitchCase="'m'" style="color:yellow">Shot Type: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.shotType[0]}}
+        </p>
+        <ng-template #nonDeltaAttackShotType>
+            <p *ngIf="attackObject.shotType != undefined"><b>Shot Type: </b>{{attackObject.shotType}}</p>
+        </ng-template>
+
+        <!-- Trigger Type -->
+        <p *ngIf="this.isDeltaArray(attackObject.triggerType) else nonDeltaAttackTriggerType">
+            <span [ngSwitch]="attackObject.triggerType[attackObject.triggerType.length - 1]">
+                <b *ngSwitchCase="'m'" style="color:yellow">Trigger Type: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.triggerType[0]}}
+        </p>
+        <ng-template #nonDeltaAttackTriggerType>
+            <p *ngIf="attackObject.triggerType != undefined"><b>Trigger Type: </b>{{attackObject.triggerType}}</p>
+        </ng-template>
+
+        <!-- Charge Time -->
+        <p *ngIf="this.isDeltaArray(attackObject.chargeTime) else nonDeltaAttackChargeTime">
+            <span [ngSwitch]="attackObject.chargeTime[attackObject.chargeTime.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Charge Time: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Charge Time: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.chargeTime[0]}}s
+        </p>
+        <ng-template #nonDeltaAttackChargeTime>
+          <p *ngIf="attackObject.chargeTime != undefined"><b>Charge Time: </b>{{attackObject.chargeTime}}s</p>
+        </ng-template>
+
+        <!-- Ammo Cost -->
+        <p *ngIf="this.isDeltaArray(attackObject.ammoCost) else nonDeltaAttackAmmoCost">
+            <span [ngSwitch]="attackObject.ammoCost[attackObject.ammoCost.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Ammo Cost: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Ammo Cost: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.ammoCost[0]}} rounds
+        </p>
+        <ng-template #nonDeltaAttackAmmoCost>
+            <p *ngIf="attackObject.ammoCost != undefined"><b>Ammo Cost: </b>{{attackObject.ammoCost}} rounds</p>
+        </ng-template>
+
+        <!-- Reload Speed -->
+        <p *ngIf="this.isDeltaArray(attackObject.reloadSpeed) else nonDeltaAttackReloadSpeed">
+            <span [ngSwitch]="attackObject.reloadSpeed[attackObject.reloadSpeed.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Reload Time: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Reload Time: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.reloadSpeed[0]}}s
+        </p>
+        <ng-template #nonDeltaAttackReloadSpeed>
+            <p *ngIf="attackObject.reloadSpeed != undefined"><b>Reload Time: </b>{{attackObject.reloadSpeed}}s</p>
+        </ng-template>
+
+        <!-- Accuracy -->
+        <p *ngIf="this.isDeltaArray(attackObject.accuracy) else nonDeltaAttackAccuracy">
+            <span [ngSwitch]="attackObject.accuracy[attackObject.accuracy.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Accuracy: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Accuracy: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.accuracy[0]}}
+        </p>
+        <ng-template #nonDeltaAttackAccuracy>
+            <p *ngIf="attackObject.accuracy != undefined"><b>Accuracy: </b>{{attackObject.accuracy}}</p>
+        </ng-template>
+
+        <!-- Damage -->
+        <div *ngIf="attackObject.damage != undefined" style="display: flex; flex-direction: row;">
+            <b style="padding-right: 5px">Damage:</b>
+            <table>
+                <tr *ngFor="let key of this.keysOf(attackObject.damage); index as index;">
+                    <ng-container *ngIf="this.isDeltaArray(attackObject.damage[key]) else nonDeltaAttackDamage">
+                        <span [ngSwitch]="attackObject.damage[key][attackObject.damage[key].length - 1]">
+                            <b *ngSwitchCase="'+'" style="color:green" >{{attackObject.damage[key][0]}} </b>
+                            <b *ngSwitchCase="'m'" style="color:yellow">{{attackObject.damage[key][0]}} </b>
+                            <b *ngSwitchCase="'-'" style="color:red">{{attackObject.damage[key][0]}} </b>
+                            <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+                        </span>
+                        <span [class]="'wficons-' +  key.toLowerCase()"></span>
+                    </ng-container>
+                    <ng-template #nonDeltaAttackDamage>
+                        <span *ngIf="attackObject.damage[key] != undefined">{{attackObject.damage[key]}} <span [class]="'wficons-' +  key.toLowerCase()"></span></span>
+                    </ng-template>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Radius -->
+        <p *ngIf="this.isDeltaArray(attackObject.radius) else nonDeltaAttackRadius">
+            <span [ngSwitch]="attackObject.radius[attackObject.radius.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Radius: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Radius: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.radius[0]}}m
+        </p>
+        <ng-template #nonDeltaAttackRadius>
+            <p *ngIf="attackObject.radius != undefined"><b>Radius: </b>{{attackObject.radius}}m</p>
+        </ng-template>
+
+        <!-- Duration -->
+        <p *ngIf="this.isDeltaArray(attackObject.duration) else nonDeltaAttackDuration">
+            <span [ngSwitch]="attackObject.duration[attackObject.duration.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Duration: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Duration: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.duration[0]}}s
+        </p>
+        <ng-template #nonDeltaAttackDuration>
+            <p *ngIf="attackObject.duration != undefined"><b>Duration: </b>{{attackObject.duration}}s</p>
+        </ng-template>
+
+        <!-- Bullet Count -->
+        <p *ngIf="this.isDeltaArray(attackObject.bulletCount) else nonDeltaAttackBulletCount">
+            <span [ngSwitch]="attackObject.bulletCount[attackObject.bulletCount.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Bullet Count: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Bullet Count: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.bulletCount[0]}} rounds
+        </p>
+        <ng-template #nonDeltaAttackBulletCount>
+            <p *ngIf="attackObject.bulletCount != undefined"><b>Bullet Count: </b>{{attackObject.bulletCount}} rounds</p>
+        </ng-template>
+
+        <!-- Pellet Count -->
+        <p *ngIf="this.isDeltaArray(attackObject.pelletCount) else nonDeltaAttackPelletCount">
+            <span [ngSwitch]="attackObject.pelletCount[attackObject.pelletCount.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Pellet Count: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Pellet Count: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.pelletCount[0]}}
+            <ng-container *ngIf="attackObject.pelletName != undefined else nonNamedPellets">
+                <ng-container *ngIf="this.isDeltaArray(attackObject.pelletName) else nonDeltaAttackPelletName">{{attackObject.pelletName[0]}}s</ng-container>
+                <ng-template #nonDeltaAttackPelletName>{{attackObject.pelletName}}s</ng-template>
+            </ng-container>
+            <ng-template #nonNamedPellets>Pellets</ng-template>
+        </p>
+        <ng-template #nonDeltaAttackPelletCount>
+            <p *ngIf="attackObject.pelletCount != undefined">
+                <b>Pellet Count: </b>{{attackObject.pelletCount}}
+                <ng-container *ngIf="attackObject.pelletName != undefined else nonNamedPellets">
+                    <ng-container *ngIf="this.isDeltaArray(attackObject.pelletName) else nonDeltaAttackPelletName">{{attackObject.pelletName[0]}}s</ng-container>
+                    <ng-template #nonDeltaAttackPelletName>{{attackObject.pelletName}}s</ng-template>
+                </ng-container>
+                <ng-template #nonNamedPellets>Pellets</ng-template>
+            </p>
+        </ng-template>
+
+        <!-- Fire Rate -->
+        <p *ngIf="this.isDeltaArray(attackObject.fireRate) else nonDeltaAttackFireRate">
+            <span [ngSwitch]="attackObject.fireRate[attackObject.fireRate.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Fire Rate: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Fire Rate: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.fireRate[0]}} rounds per sec
+        </p>
+        <ng-template #nonDeltaAttackFireRate>
+            <p *ngIf="attackObject.fireRate != undefined"><b>Fire Rate: </b>{{attackObject.fireRate}} rounds per sec</p>
+        </ng-template>
+
+        <!-- Shot Speed -->
+        <p *ngIf="this.isDeltaArray(attackObject.shotSpeed) else nonDeltaAttackShotSpeed">
+            <span [ngSwitch]="attackObject.shotSpeed[attackObject.shotSpeed.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Shot Speed: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Shot Speed: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.shotSpeed[0]}}m/s
+        </p>
+        <ng-template #nonDeltaAttackShotSpeed>
+            <p *ngIf="attackObject.shotSpeed != undefined"><b>Shot Speed: </b>{{attackObject.shotSpeed}}m/s</p>
+        </ng-template>
+
+        <!-- Punch Through -->
+        <p *ngIf="this.isDeltaArray(attackObject.punchThrough) else nonDeltaAttackPunchThrough">
+            <span [ngSwitch]="attackObject.punchThrough[attackObject.punchThrough.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Punch Through: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Punch Through: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.punchThrough[0]}}m
+        </p>
+        <ng-template #nonDeltaAttackPunchThrough>
+            <p *ngIf="attackObject.punchThrough != undefined"><b>Punch Through: </b>{{attackObject.punchThrough}}m</p>
+        </ng-template>
+
+        <!-- Crit Chance -->
+        <p *ngIf="this.isDeltaArray(attackObject.critChance) else nonDeltaAttackCritChance">
+            <span [ngSwitch]="attackObject.critChance[attackObject.critChance.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Crit Chance: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Crit Chance: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.critChance[0]}}%
+        </p>
+        <ng-template #nonDeltaAttackCritChance>
+            <p *ngIf="attackObject.critChance != undefined"><b>Crit Chance: </b>{{attackObject.critChance}}%</p>
+        </ng-template>
+
+        <!-- Crit Damage -->
+        <p *ngIf="this.isDeltaArray(attackObject.critDamage) else nonDeltaAttackCritDamage">
+            <span [ngSwitch]="attackObject.critDamage[attackObject.critDamage.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Crit Multiplier: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Crit Multiplier: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.critDamage[0]}}x
+        </p>
+        <ng-template #nonDeltaAttackCritDamage>
+            <p *ngIf="attackObject.critDamage != undefined"><b>Crit Multiplier: </b>{{attackObject.critDamage}}x</p>
+        </ng-template>
+
+        <!-- Status Chance -->
+        <p *ngIf="this.isDeltaArray(attackObject.statusChance) else nonDeltaAttackStatusChance">
+            <span [ngSwitch]="attackObject.statusChance[attackObject.statusChance.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Status Chance: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Status Chance: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.statusChance[0]}}%
+        </p>
+        <ng-template #nonDeltaAttackStatusChance>
+            <p *ngIf="attackObject.statusChance != undefined"><b>Status Chance: </b>{{attackObject.statusChance}}%</p>
+        </ng-template>
+
+        <!-- Range -->
+        <p *ngIf="this.isDeltaArray(attackObject.range) else nonDeltaAttackRange">
+            <span [ngSwitch]="attackObject.range[attackObject.range.length - 1]">
+                <b *ngSwitchCase="'+'" style="color:green">Range: </b>
+                <b *ngSwitchCase="'-'" style="color:red">Range: </b>
+                <b *ngSwitchDefault>Corrupted JSON data, please contact the developer!</b>
+            </span>
+            {{attackObject.range[0]}}m
+        </p>
+        <ng-template #nonDeltaAttackRange>
+            <p *ngIf="attackObject.range != undefined"><b>Range: </b>{{attackObject.range}}m</p>
+        </ng-template>
+
+        </div>
+    </ng-container>
+ 
+</ion-content>
